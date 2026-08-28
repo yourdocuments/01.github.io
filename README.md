@@ -1,2 +1,2 @@
 # neilusha.github.io
-s
+https://neilusha.github.io/settings/pages
