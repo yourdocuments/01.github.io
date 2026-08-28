@@ -1,2965 +1,3246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Neilusha Tour Guide | Explore Bangladesh</title>
 
-  <meta
-    name="description"
-    content="Neilusha Tour Guide - Discover Bangladesh with unforgettable tours, destinations and local travel experiences."
-  />
+  <meta name="description"
+        content="Neilusha Tour Guide - Explore Bangladesh with trusted guides, affordable tour packages and unforgettable travel experiences.">
 
-  <!-- Google Fonts -->
+  <!-- ==============================
+       GOOGLE FONTS
+  =============================== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  />
-
-  <style>
-    :root {
-      --navy: #071a2b;
-      --navy-2: #0b263d;
-      --blue: #16a8e8;
-      --blue-dark: #078ac4;
-      --yellow: #ffc857;
-      --white: #ffffff;
-      --light: #f5f9fc;
-      --text: #172333;
-      --muted: #718096;
-      --border: #e4edf3;
-      --shadow: 0 18px 45px rgba(7, 26, 43, 0.11);
-      --radius: 20px;
-      --transition: 0.3s ease;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: "Inter", sans-serif;
-      color: var(--text);
-      background: var(--white);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-      font-family: "Poppins", sans-serif;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    button,
-    input,
-    select {
-      font-family: inherit;
-    }
-
-    img {
-      width: 100%;
-      display: block;
-      object-fit: cover;
-    }
-
-    .container {
-      width: min(1180px, 92%);
-      margin: auto;
-    }
-
-    /* =========================
-       TOP BAR
-    ========================= */
-
-    .topbar {
-      background: var(--navy);
-      color: #dceaf3;
-      font-size: 13px;
-      padding: 9px 0;
-    }
-
-    .topbar-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .topbar-left,
-    .topbar-right {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-
-    .topbar i {
-      color: var(--yellow);
-      margin-right: 6px;
-    }
-
-    /* =========================
-       NAVBAR
-    ========================= */
-
-    header {
-      position: absolute;
-      width: 100%;
-      top: 38px;
-      left: 0;
-      z-index: 1000;
-    }
-
-    .navbar {
-      background: rgba(255, 255, 255, 0.97);
-      backdrop-filter: blur(14px);
-      border-radius: 16px;
-      min-height: 74px;
-      padding: 0 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      font-family: "Poppins", sans-serif;
-      font-weight: 800;
-      font-size: 21px;
-      color: var(--navy);
-      white-space: nowrap;
-    }
-
-    .logo-icon {
-      width: 43px;
-      height: 43px;
-      background: var(--blue);
-      color: white;
-      border-radius: 13px;
-      display: grid;
-      place-items: center;
-      font-size: 19px;
-      transform: rotate(-5deg);
-    }
-
-    .logo span {
-      color: var(--blue-dark);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 27px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: #344454;
-      font-size: 14px;
-      font-weight: 600;
-      transition: var(--transition);
-      position: relative;
-    }
-
-    .nav-links a:hover {
-      color: var(--blue);
-    }
-
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -7px;
-      width: 0;
-      height: 2px;
-      background: var(--blue);
-      transition: var(--transition);
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .nav-book {
-      background: var(--navy);
-      color: white !important;
-      padding: 12px 18px;
-      border-radius: 10px;
-    }
-
-    .nav-book:hover {
-      background: var(--blue);
-    }
-
-    .nav-book::after {
-      display: none;
-    }
-
-    .menu-btn {
-      display: none;
-      border: 0;
-      background: transparent;
-      font-size: 24px;
-      cursor: pointer;
-      color: var(--navy);
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      min-height: 760px;
-      padding-top: 160px;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(
-          90deg,
-          rgba(4, 19, 32, 0.90) 0%,
-          rgba(4, 19, 32, 0.66) 48%,
-          rgba(4, 19, 32, 0.15) 100%
-        ),
-        url("https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?auto=format&fit=crop&w=2000&q=85")
-        center/cover no-repeat;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      right: -100px;
-      bottom: -180px;
-      width: 430px;
-      height: 430px;
-      border-radius: 50%;
-      background: rgba(22, 168, 232, 0.13);
-      filter: blur(3px);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      color: white;
-      max-width: 680px;
-      padding-bottom: 100px;
-    }
-
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255, 255, 255, 0.14);
-      border: 1px solid rgba(255, 255, 255, 0.24);
-      backdrop-filter: blur(8px);
-      border-radius: 50px;
-      padding: 9px 15px;
-      font-size: 13px;
-      margin-bottom: 20px;
-    }
-
-    .hero-tag i {
-      color: var(--yellow);
-    }
-
-    .hero h1 {
-      font-size: clamp(42px, 6vw, 76px);
-      line-height: 1.05;
-      letter-spacing: -2px;
-      margin-bottom: 22px;
-    }
-
-    .hero h1 span {
-      color: var(--yellow);
-    }
-
-    .hero p {
-      max-width: 590px;
-      color: #e7eef3;
-      font-size: 17px;
-      margin-bottom: 30px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 13px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      border: none;
-      cursor: pointer;
-      padding: 14px 21px;
-      border-radius: 11px;
-      font-weight: 700;
-      font-size: 14px;
-      transition: var(--transition);
-    }
-
-    .btn-primary {
-      background: var(--yellow);
-      color: var(--navy);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(255, 200, 87, 0.3);
-    }
-
-    .btn-outline {
-      color: white;
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    .btn-outline:hover {
-      background: white;
-      color: var(--navy);
-    }
-
-    /* =========================
-       SEARCH BOX
-    ========================= */
-
-    .search-wrapper {
-      position: absolute;
-      z-index: 10;
-      bottom: -55px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: min(1080px, 90%);
-    }
-
-    .search-box {
-      background: white;
-      border-radius: 18px;
-      padding: 17px;
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr 1fr auto;
-      gap: 10px;
-      box-shadow: var(--shadow);
-    }
-
-    .search-field {
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 11px 13px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      min-width: 0;
-    }
-
-    .search-field i {
-      color: var(--blue);
-      font-size: 15px;
-    }
-
-    .search-field label {
-      display: block;
-      font-size: 10px;
-      color: var(--muted);
-      margin-bottom: 1px;
-    }
-
-    .search-field input,
-    .search-field select {
-      width: 100%;
-      border: none;
-      outline: none;
-      color: var(--text);
-      background: transparent;
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .search-btn {
-      background: var(--blue);
-      color: white;
-      border: 0;
-      padding: 0 22px;
-      border-radius: 12px;
-      cursor: pointer;
-      font-weight: 700;
-      transition: var(--transition);
-    }
-
-    .search-btn:hover {
-      background: var(--blue-dark);
-    }
-
-    /* =========================
-       SECTION
-    ========================= */
-
-    section {
-      padding: 105px 0;
-    }
-
-    .section-head {
-      text-align: center;
-      max-width: 680px;
-      margin: 0 auto 45px;
-    }
-
-    .section-label {
-      display: inline-block;
-      color: var(--blue-dark);
-      background: #e9f8ff;
-      padding: 7px 13px;
-      border-radius: 30px;
-      font-size: 12px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 12px;
-    }
-
-    .section-head h2 {
-      font-size: clamp(30px, 4vw, 43px);
-      line-height: 1.15;
-      color: var(--navy);
-      margin-bottom: 12px;
-    }
-
-    .section-head p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    /* =========================
-       DESTINATIONS
-    ========================= */
-
-    .destinations {
-      padding-top: 145px;
-      background: white;
-    }
-
-    .destination-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .destination-card {
-      position: relative;
-      height: 310px;
-      overflow: hidden;
-      border-radius: var(--radius);
-      cursor: pointer;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
-    }
-
-    .destination-card img {
-      height: 100%;
-      transition: transform 0.6s ease;
-    }
-
-    .destination-card:hover img {
-      transform: scale(1.08);
-    }
-
-    .destination-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(4, 17, 28, 0.9),
-        rgba(4, 17, 28, 0.05) 65%
-      );
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 24px;
-      color: white;
-    }
-
-    .destination-overlay h3 {
-      font-size: 22px;
-      margin-bottom: 3px;
-    }
-
-    .destination-overlay p {
-      color: #dce8ef;
-      font-size: 13px;
-    }
-
-    .destination-location {
-      color: var(--yellow);
-      font-size: 11px;
-      margin-bottom: 5px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-    }
-
-    /* =========================
-       TOURS
-    ========================= */
-
-    .tours {
-      background: var(--light);
-    }
-
-    .tour-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .tour-card {
-      background: white;
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: 0 7px 28px rgba(7, 26, 43, 0.07);
-      transition: var(--transition);
-    }
-
-    .tour-card:hover {
-      transform: translateY(-7px);
-      box-shadow: var(--shadow);
-    }
-
-    .tour-image {
-      height: 215px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .tour-image img {
-      height: 100%;
-      transition: 0.5s ease;
-    }
-
-    .tour-card:hover .tour-image img {
-      transform: scale(1.06);
-    }
-
-    .tour-badge {
-      position: absolute;
-      top: 14px;
-      left: 14px;
-      background: var(--yellow);
-      color: var(--navy);
-      font-size: 11px;
-      padding: 6px 10px;
-      border-radius: 30px;
-      font-weight: 800;
-    }
-
-    .tour-body {
-      padding: 20px;
-    }
-
-    .tour-location {
-      color: var(--blue-dark);
-      font-size: 12px;
-      font-weight: 700;
-      margin-bottom: 5px;
-    }
-
-    .tour-body h3 {
-      font-size: 20px;
-      margin-bottom: 8px;
-    }
-
-    .tour-description {
-      color: var(--muted);
-      font-size: 13px;
-      margin-bottom: 16px;
-    }
-
-    .tour-meta {
-      display: flex;
-      gap: 13px;
-      border-top: 1px solid var(--border);
-      padding-top: 14px;
-      margin-bottom: 16px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .tour-meta i {
-      color: var(--blue);
-      margin-right: 4px;
-    }
-
-    .tour-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .price small {
-      display: block;
-      font-size: 10px;
-      color: var(--muted);
-    }
-
-    .price strong {
-      font-size: 22px;
-      color: var(--navy);
-    }
-
-    .tour-btn {
-      background: #eaf8ff;
-      color: var(--blue-dark);
-      padding: 10px 14px;
-      border-radius: 9px;
-      border: 0;
-      font-weight: 700;
-      font-size: 12px;
-      cursor: pointer;
-      transition: var(--transition);
-    }
-
-    .tour-btn:hover {
-      background: var(--blue);
-      color: white;
-    }
-
-    /* =========================
-       WHY US
-    ========================= */
-
-    .why-us {
-      background: white;
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      align-items: center;
-    }
-
-    .why-image {
-      position: relative;
-    }
-
-    .why-image-main {
-      height: 520px;
-      border-radius: 25px;
-      overflow: hidden;
-    }
-
-    .why-image-main img {
-      height: 100%;
-    }
-
-    .experience-box {
-      position: absolute;
-      bottom: 25px;
-      right: -25px;
-      background: white;
-      border-radius: 17px;
-      padding: 18px 22px;
-      box-shadow: var(--shadow);
-      display: flex;
-      gap: 12px;
-      align-items: center;
-    }
-
-    .experience-icon {
-      width: 45px;
-      height: 45px;
-      border-radius: 12px;
-      background: #fff4d8;
-      color: #e19a00;
-      display: grid;
-      place-items: center;
-      font-size: 19px;
-    }
-
-    .experience-box strong {
-      display: block;
-      font-size: 21px;
-      color: var(--navy);
-    }
-
-    .experience-box span {
-      font-size: 11px;
-      color: var(--muted);
-    }
-
-    .why-content .section-label {
-      margin-bottom: 10px;
-    }
-
-    .why-content h2 {
-      font-size: clamp(30px, 4vw, 43px);
-      line-height: 1.15;
-      color: var(--navy);
-      margin-bottom: 16px;
-    }
-
-    .why-content > p {
-      color: var(--muted);
-      font-size: 15px;
-      margin-bottom: 28px;
-    }
-
-    .feature-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .feature {
-      display: flex;
-      gap: 13px;
-      align-items: flex-start;
-    }
-
-    .feature-icon {
-      min-width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: #e9f8ff;
-      color: var(--blue);
-      display: grid;
-      place-items: center;
-    }
-
-    .feature h4 {
-      font-size: 14px;
-      margin-bottom: 3px;
-    }
-
-    .feature p {
-      font-size: 11px;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    /* =========================
-       HOW IT WORKS
-    ========================= */
-
-    .how {
-      background: var(--navy);
-      color: white;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .how .section-head h2 {
-      color: white;
-    }
-
-    .how .section-head p {
-      color: #aebdca;
-    }
-
-    .how .section-label {
-      background: rgba(22, 168, 232, 0.15);
-      color: #5fc9f4;
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      position: relative;
-    }
-
-    .steps::before {
-      content: "";
-      position: absolute;
-      top: 31px;
-      left: 13%;
-      right: 13%;
-      height: 1px;
-      border-top: 1px dashed rgba(255, 255, 255, 0.25);
-    }
-
-    .step {
-      text-align: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    .step-number {
-      width: 62px;
-      height: 62px;
-      border-radius: 50%;
-      background: var(--blue);
-      color: white;
-      display: grid;
-      place-items: center;
-      margin: 0 auto 18px;
-      border: 6px solid var(--navy);
-      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.16);
-      font-size: 20px;
-      font-weight: 800;
-    }
-
-    .step h3 {
-      font-size: 16px;
-      margin-bottom: 7px;
-    }
-
-    .step p {
-      color: #aebdca;
-      font-size: 12px;
-      max-width: 210px;
-      margin: auto;
-    }
-
-    /* =========================
-       BANGLADESH BANNER
-    ========================= */
-
-    .discover {
-      padding: 90px 0;
-    }
-
-    .discover-box {
-      min-height: 430px;
-      border-radius: 27px;
-      overflow: hidden;
-      position: relative;
-      background:
-        linear-gradient(
-          90deg,
-          rgba(5, 20, 33, 0.91),
-          rgba(5, 20, 33, 0.45),
-          rgba(5, 20, 33, 0.05)
-        ),
-        url("https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1800&q=85")
-        center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      padding: 55px;
-    }
-
-    .discover-content {
-      color: white;
-      max-width: 550px;
-    }
-
-    .discover-content .section-label {
-      background: rgba(255, 200, 87, 0.16);
-      color: var(--yellow);
-    }
-
-    .discover-content h2 {
-      font-size: clamp(32px, 4vw, 49px);
-      line-height: 1.12;
-      margin-bottom: 14px;
-    }
-
-    .discover-content p {
-      color: #e1e9ee;
-      font-size: 14px;
-      margin-bottom: 24px;
-    }
-
-    /* =========================
-       REVIEWS
-    ========================= */
-
-    .reviews {
-      background: var(--light);
-    }
-
-    .review-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .review-card {
-      background: white;
-      padding: 26px;
-      border-radius: var(--radius);
-      box-shadow: 0 6px 25px rgba(7, 26, 43, 0.05);
-    }
-
-    .stars {
-      color: #f6b51c;
-      font-size: 13px;
-      margin-bottom: 15px;
-    }
-
-    .review-card > p {
-      font-size: 14px;
-      color: #536273;
-      line-height: 1.75;
-      margin-bottom: 22px;
-    }
-
-    .review-user {
-      display: flex;
-      gap: 11px;
-      align-items: center;
-    }
-
-    .avatar {
-      width: 43px;
-      height: 43px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: #dff5ff;
-      color: var(--blue-dark);
-      font-weight: 800;
-    }
-
-    .review-user strong {
-      display: block;
-      font-size: 13px;
-    }
-
-    .review-user span {
-      font-size: 11px;
-      color: var(--muted);
-    }
-
-    /* =========================
-       CTA
-    ========================= */
-
-    .cta {
-      padding: 90px 0;
-      background: white;
-    }
-
-    .cta-box {
-      background: linear-gradient(135deg, var(--blue), #0a8cc7);
-      border-radius: 25px;
-      padding: 55px;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 30px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-box::after {
-      content: "";
-      position: absolute;
-      width: 280px;
-      height: 280px;
-      border-radius: 50%;
-      border: 35px solid rgba(255, 255, 255, 0.08);
-      right: -90px;
-      top: -120px;
-    }
-
-    .cta-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .cta-content h2 {
-      font-size: clamp(27px, 4vw, 40px);
-      margin-bottom: 8px;
-    }
-
-    .cta-content p {
-      color: #e3f7ff;
-      font-size: 14px;
-    }
-
-    .cta .btn {
-      position: relative;
-      z-index: 2;
-      background: white;
-      color: var(--blue-dark);
-      white-space: nowrap;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      background: #04121e;
-      color: #b8c7d1;
-      padding-top: 65px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
-      gap: 45px;
-      padding-bottom: 50px;
-    }
-
-    .footer-logo {
-      color: white;
-      margin-bottom: 15px;
-    }
-
-    .footer-about {
-      font-size: 13px;
-      max-width: 300px;
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
-
-    .socials {
-      display: flex;
-      gap: 9px;
-    }
-
-    .socials a {
-      width: 37px;
-      height: 37px;
-      border-radius: 9px;
-      background: rgba(255, 255, 255, 0.07);
-      display: grid;
-      place-items: center;
-      transition: var(--transition);
-    }
-
-    .socials a:hover {
-      background: var(--blue);
-      color: white;
-    }
-
-    .footer-col h3 {
-      color: white;
-      font-size: 15px;
-      margin-bottom: 17px;
-    }
-
-    .footer-col ul {
-      list-style: none;
-    }
-
-    .footer-col li {
-      margin-bottom: 10px;
-      font-size: 12px;
-    }
-
-    .footer-col a:hover {
-      color: var(--blue);
-    }
-
-    .contact-item {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 13px;
-      font-size: 12px;
-    }
-
-    .contact-item i {
-      color: var(--yellow);
-      width: 15px;
-      margin-top: 4px;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 18px 0;
-      font-size: 11px;
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-    }
-
-    /* =========================
-       MODAL
-    ========================= */
-
-    .modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(2, 12, 20, 0.72);
-      backdrop-filter: blur(7px);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      z-index: 3000;
-    }
-
-    .modal.active {
-      display: flex;
-    }
-
-    .modal-box {
-      width: min(510px, 100%);
-      max-height: 90vh;
-      overflow-y: auto;
-      background: white;
-      border-radius: 22px;
-      padding: 28px;
-      position: relative;
-      animation: modalIn 0.3s ease;
-    }
-
-    @keyframes modalIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px) scale(0.98);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-
-    .close-modal {
-      position: absolute;
-      right: 18px;
-      top: 17px;
-      width: 36px;
-      height: 36px;
-      border: none;
-      background: #f0f4f6;
-      border-radius: 50%;
-      cursor: pointer;
-      color: var(--navy);
-    }
-
-    .modal-box h2 {
-      color: var(--navy);
-      margin-bottom: 6px;
-    }
-
-    .modal-subtitle {
-      color: var(--muted);
-      font-size: 13px;
-      margin-bottom: 20px;
-    }
-
-    .form-group {
-      margin-bottom: 14px;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 12px;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      border: 1px solid var(--border);
-      padding: 12px 13px;
-      border-radius: 10px;
-      outline: none;
-      font-size: 13px;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--blue);
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .submit-booking {
-      width: 100%;
-      background: var(--blue);
-      color: white;
-      border: none;
-      padding: 14px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: 800;
-      margin-top: 4px;
-    }
-
-    .submit-booking:hover {
-      background: var(--blue-dark);
-    }
-
-    /* =========================
-       TOAST
-    ========================= */
-
-    .toast {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      background: var(--navy);
-      color: white;
-      padding: 14px 18px;
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-      transform: translateY(100px);
-      opacity: 0;
-      transition: 0.35s ease;
-      z-index: 5000;
-      font-size: 13px;
-    }
-
-    .toast.show {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
-
-    @media (max-width: 1050px) {
-      .nav-links {
-        gap: 16px;
-      }
-
-      .search-box {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .search-btn {
-        min-height: 48px;
-      }
-
-      .destination-grid,
-      .tour-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 800px) {
-      .topbar {
-        display: none;
-      }
-
-      header {
-        top: 14px;
-      }
-
-      .navbar {
-        min-height: 65px;
-      }
-
-      .menu-btn {
-        display: block;
-      }
-
-      .nav-links {
-        position: absolute;
-        top: 75px;
-        left: 0;
-        right: 0;
-        background: white;
-        border-radius: 14px;
-        padding: 15px;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 4px;
-        box-shadow: var(--shadow);
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-10px);
-        transition: 0.3s ease;
-      }
-
-      .nav-links.active {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-      }
-
-      .nav-links a {
-        display: block;
-        padding: 12px;
-      }
-
-      .nav-book {
-        text-align: center;
-        margin-top: 5px;
-      }
-
-      .hero {
-        min-height: 720px;
-        padding-top: 130px;
-      }
-
-      .hero-content {
-        padding-bottom: 120px;
-      }
-
-      .hero h1 {
-        font-size: 47px;
-      }
-
-      .search-wrapper {
-        bottom: -150px;
-      }
-
-      .search-box {
-        grid-template-columns: 1fr;
-      }
-
-      .destinations {
-        padding-top: 235px;
-      }
-
-      .why-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
-
-      .experience-box {
-        right: 15px;
-      }
-
-      .steps {
-        grid-template-columns: 1fr 1fr;
-        row-gap: 35px;
-      }
-
-      .steps::before {
-        display: none;
-      }
-
-      .cta-box {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 38px 28px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      section {
-        padding: 75px 0;
-      }
-
-      .destination-grid,
-      .tour-grid,
-      .review-grid,
-      .feature-list {
-        grid-template-columns: 1fr;
-      }
-
-      .destination-card {
-        height: 285px;
-      }
-
-      .why-image-main {
-        height: 390px;
-      }
-
-      .steps {
-        grid-template-columns: 1fr;
-      }
-
-      .discover {
-        padding: 65px 0;
-      }
-
-      .discover-box {
-        min-height: 500px;
-        padding: 30px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h1 {
-        font-size: 41px;
-        letter-spacing: -1px;
-      }
-
-      .hero p {
-        font-size: 14px;
-      }
-
-      .logo {
-        font-size: 17px;
-      }
-
-      .logo-icon {
-        width: 38px;
-        height: 38px;
-      }
-    }
-  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+  <!-- ==============================
+       FONT AWESOME
+  =============================== -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+
+  --primary:#0ea5e9;
+  --primary-dark:#0284c7;
+
+  --navy:#071a2b;
+  --navy-2:#0b263d;
+
+  --yellow:#ffc857;
+
+  --white:#ffffff;
+  --black:#111827;
+
+  --bg:#f5f9fc;
+  --bg-2:#eef7fb;
+
+  --text:#172333;
+  --muted:#6b7b8c;
+
+  --border:#e4edf3;
+
+  --success:#16a34a;
+  --danger:#dc2626;
+
+  --shadow:
+    0 20px 60px rgba(7,26,43,.10);
+
+  --shadow-small:
+    0 8px 25px rgba(7,26,43,.07);
+
+  --radius:22px;
+
+  --transition:.3s ease;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  font-family:"Inter",sans-serif;
+
+  color:var(--text);
+
+  background:white;
+
+  line-height:1.6;
+
+  overflow-x:hidden;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+
+  font-family:"Poppins",sans-serif;
+
+}
+
+a{
+
+  text-decoration:none;
+
+  color:inherit;
+
+}
+
+button,
+input,
+select,
+textarea{
+
+  font-family:inherit;
+
+}
+
+button{
+
+  cursor:pointer;
+
+}
+
+img{
+
+  display:block;
+
+  width:100%;
+
+  object-fit:cover;
+
+}
+
+.container{
+
+  width:min(1180px,92%);
+
+  margin:auto;
+
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.topbar{
+
+  background:var(--navy);
+
+  color:#dbe8f0;
+
+  font-size:13px;
+
+  padding:9px 0;
+
+}
+
+.topbar-content{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+}
+
+.topbar-left,
+.topbar-right{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:22px;
+
+}
+
+.topbar i{
+
+  color:var(--yellow);
+
+  margin-right:6px;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+
+  position:absolute;
+
+  top:38px;
+
+  left:0;
+
+  width:100%;
+
+  z-index:1000;
+
+}
+
+.navbar{
+
+  min-height:76px;
+
+  background:rgba(255,255,255,.97);
+
+  backdrop-filter:blur(15px);
+
+  border-radius:18px;
+
+  padding:0 20px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+}
+
+.logo{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  color:var(--navy);
+
+  font-family:"Poppins",sans-serif;
+
+  font-size:20px;
+
+  font-weight:800;
+
+  white-space:nowrap;
+
+}
+
+.logo span{
+
+  color:var(--primary-dark);
+
+}
+
+.logo-icon{
+
+  width:44px;
+
+  height:44px;
+
+  border-radius:13px;
+
+  background:var(--primary);
+
+  color:white;
+
+  display:grid;
+
+  place-items:center;
+
+  font-size:19px;
+
+  transform:rotate(-4deg);
+
+}
+
+.nav-links{
+
+  list-style:none;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:26px;
+
+}
+
+.nav-links a{
+
+  position:relative;
+
+  color:#344454;
+
+  font-size:13px;
+
+  font-weight:600;
+
+  transition:var(--transition);
+
+}
+
+.nav-links a:hover{
+
+  color:var(--primary);
+
+}
+
+.nav-links a.active{
+
+  color:var(--primary);
+
+}
+
+.nav-links a.active::after{
+
+  width:100%;
+
+}
+
+.nav-links a::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+
+  bottom:-7px;
+
+  height:2px;
+
+  width:0;
+
+  background:var(--primary);
+
+  transition:var(--transition);
+
+}
+
+.nav-links a:hover::after{
+
+  width:100%;
+
+}
+
+.book-nav{
+
+  background:var(--navy);
+
+  color:white !important;
+
+  padding:12px 18px;
+
+  border-radius:10px;
+
+}
+
+.book-nav:hover{
+
+  background:var(--primary);
+
+}
+
+.book-nav::after{
+
+  display:none;
+
+}
+
+.menu-btn{
+
+  display:none;
+
+  border:0;
+
+  background:transparent;
+
+  color:var(--navy);
+
+  font-size:24px;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+  min-height:790px;
+
+  padding-top:170px;
+
+  position:relative;
+
+  display:flex;
+
+  align-items:center;
+
+  overflow:hidden;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(3,17,29,.94) 0%,
+      rgba(3,17,29,.75) 42%,
+      rgba(3,17,29,.18) 100%
+    ),
+
+    url("https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=2200&q=90")
+    center/cover no-repeat;
+
+}
+
+.hero::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:550px;
+
+  height:550px;
+
+  right:-220px;
+
+  bottom:-250px;
+
+  border-radius:50%;
+
+  background:rgba(14,165,233,.13);
+
+}
+
+.hero-content{
+
+  position:relative;
+
+  z-index:2;
+
+  color:white;
+
+  max-width:700px;
+
+  padding-bottom:110px;
+
+}
+
+.hero-badge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:9px 15px;
+
+  border-radius:50px;
+
+  background:rgba(255,255,255,.12);
+
+  border:1px solid rgba(255,255,255,.2);
+
+  backdrop-filter:blur(8px);
+
+  font-size:12px;
+
+  font-weight:600;
+
+  margin-bottom:20px;
+
+}
+
+.hero-badge i{
+
+  color:var(--yellow);
+
+}
+
+.hero h1{
+
+  font-size:clamp(43px,6vw,76px);
+
+  line-height:1.05;
+
+  letter-spacing:-2px;
+
+  margin-bottom:22px;
+
+}
+
+.hero h1 span{
+
+  color:var(--yellow);
+
+}
+
+.hero-description{
+
+  max-width:610px;
+
+  color:#e1ebf0;
+
+  font-size:16px;
+
+  margin-bottom:30px;
+
+}
+
+.hero-buttons{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  flex-wrap:wrap;
+
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.btn{
+
+  border:0;
+
+  display:inline-flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:9px;
+
+  padding:14px 21px;
+
+  border-radius:11px;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  transition:var(--transition);
+
+}
+
+.btn-primary{
+
+  background:var(--yellow);
+
+  color:var(--navy);
+
+}
+
+.btn-primary:hover{
+
+  transform:translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(255,200,87,.3);
+
+}
+
+.btn-outline{
+
+  color:white;
+
+  background:rgba(255,255,255,.08);
+
+  border:1px solid rgba(255,255,255,.4);
+
+}
+
+.btn-outline:hover{
+
+  background:white;
+
+  color:var(--navy);
+
+}
+
+.btn-blue{
+
+  background:var(--primary);
+
+  color:white;
+
+}
+
+.btn-blue:hover{
+
+  background:var(--primary-dark);
+
+  transform:translateY(-2px);
+
+}
+
+
+/* =========================================================
+   HERO STATS
+========================================================= */
+
+.hero-stats{
+
+  display:flex;
+
+  gap:35px;
+
+  margin-top:38px;
+
+  flex-wrap:wrap;
+
+}
+
+.hero-stat{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+}
+
+.hero-stat-icon{
+
+  width:40px;
+
+  height:40px;
+
+  border-radius:11px;
+
+  background:rgba(255,255,255,.12);
+
+  display:grid;
+
+  place-items:center;
+
+  color:var(--yellow);
+
+}
+
+.hero-stat strong{
+
+  display:block;
+
+  font-size:16px;
+
+}
+
+.hero-stat span{
+
+  display:block;
+
+  color:#b9c9d4;
+
+  font-size:10px;
+
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-area{
+
+  position:absolute;
+
+  z-index:10;
+
+  left:50%;
+
+  bottom:-55px;
+
+  transform:translateX(-50%);
+
+  width:min(1080px,90%);
+
+}
+
+.search-box{
+
+  background:white;
+
+  border-radius:18px;
+
+  padding:17px;
+
+  display:grid;
+
+  grid-template-columns:1.4fr 1fr 1fr 1fr auto;
+
+  gap:10px;
+
+  box-shadow:var(--shadow);
+
+}
+
+.search-field{
+
+  min-width:0;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  border:1px solid var(--border);
+
+  border-radius:12px;
+
+  padding:10px 12px;
+
+}
+
+.search-field>i{
+
+  color:var(--primary);
+
+}
+
+.search-field label{
+
+  display:block;
+
+  color:var(--muted);
+
+  font-size:9px;
+
+  font-weight:600;
+
+}
+
+.search-field input,
+.search-field select{
+
+  width:100%;
+
+  border:0;
+
+  outline:0;
+
+  background:transparent;
+
+  color:var(--text);
+
+  font-size:12px;
+
+  font-weight:600;
+
+}
+
+.search-btn{
+
+  border:0;
+
+  border-radius:12px;
+
+  padding:0 21px;
+
+  background:var(--primary);
+
+  color:white;
+
+  font-weight:800;
+
+  transition:var(--transition);
+
+}
+
+.search-btn:hover{
+
+  background:var(--primary-dark);
+
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+section{
+
+  padding:100px 0;
+
+}
+
+.section-header{
+
+  text-align:center;
+
+  max-width:700px;
+
+  margin:0 auto 45px;
+
+}
+
+.section-label{
+
+  display:inline-block;
+
+  padding:7px 13px;
+
+  border-radius:50px;
+
+  background:#e8f7fd;
+
+  color:var(--primary-dark);
+
+  font-size:10px;
+
+  font-weight:800;
+
+  letter-spacing:1px;
+
+  text-transform:uppercase;
+
+  margin-bottom:12px;
+
+}
+
+.section-header h2{
+
+  color:var(--navy);
+
+  font-size:clamp(30px,4vw,44px);
+
+  line-height:1.15;
+
+  margin-bottom:12px;
+
+}
+
+.section-header p{
+
+  color:var(--muted);
+
+  font-size:14px;
+
+}
+
+
+/* =========================================================
+   DESTINATIONS
+========================================================= */
+
+.destinations{
+
+  padding-top:150px;
+
+}
+
+.destination-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:20px;
+
+}
+
+.destination-card{
+
+  height:310px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:var(--radius);
+
+  box-shadow:var(--shadow-small);
+
+  cursor:pointer;
+
+}
+
+.destination-card img{
+
+  height:100%;
+
+  transition:.6s ease;
+
+}
+
+.destination-card:hover img{
+
+  transform:scale(1.08);
+
+}
+
+.destination-overlay{
+
+  position:absolute;
+
+  inset:0;
+
+  padding:24px;
+
+  color:white;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:flex-end;
+
+  background:
+
+    linear-gradient(
+      to top,
+      rgba(3,16,28,.92),
+      rgba(3,16,28,.02) 68%
+    );
+
+}
+
+.destination-location{
+
+  color:var(--yellow);
+
+  text-transform:uppercase;
+
+  font-size:10px;
+
+  font-weight:800;
+
+  letter-spacing:.8px;
+
+}
+
+.destination-overlay h3{
+
+  font-size:22px;
+
+  margin:4px 0;
+
+}
+
+.destination-overlay p{
+
+  color:#dbe6ec;
+
+  font-size:12px;
+
+}
+
+
+/* =========================================================
+   PACKAGE SECTION
+========================================================= */
+
+.packages{
+
+  background:var(--bg);
+
+}
+
+.package-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:22px;
+
+}
+
+.package-card{
+
+  background:white;
+
+  border-radius:var(--radius);
+
+  overflow:hidden;
+
+  box-shadow:var(--shadow-small);
+
+  transition:var(--transition);
+
+}
+
+.package-card:hover{
+
+  transform:translateY(-7px);
+
+  box-shadow:var(--shadow);
+
+}
+
+.package-image{
+
+  height:215px;
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+.package-image img{
+
+  height:100%;
+
+  transition:.5s ease;
+
+}
+
+.package-card:hover .package-image img{
+
+  transform:scale(1.07);
+
+}
+
+.package-badge{
+
+  position:absolute;
+
+  top:14px;
+
+  left:14px;
+
+  background:var(--yellow);
+
+  color:var(--navy);
+
+  border-radius:30px;
+
+  padding:6px 10px;
+
+  font-size:9px;
+
+  font-weight:900;
+
+}
+
+.package-body{
+
+  padding:20px;
+
+}
+
+.package-location{
+
+  color:var(--primary-dark);
+
+  font-size:11px;
+
+  font-weight:800;
+
+  margin-bottom:4px;
+
+}
+
+.package-body h3{
+
+  color:var(--navy);
+
+  font-size:19px;
+
+  margin-bottom:7px;
+
+}
+
+.package-body>p{
+
+  color:var(--muted);
+
+  font-size:12px;
+
+  line-height:1.6;
+
+  margin-bottom:15px;
+
+}
+
+.package-meta{
+
+  display:flex;
+
+  gap:16px;
+
+  padding-top:13px;
+
+  margin-bottom:16px;
+
+  border-top:1px solid var(--border);
+
+  color:var(--muted);
+
+  font-size:11px;
+
+}
+
+.package-meta i{
+
+  color:var(--primary);
+
+  margin-right:4px;
+
+}
+
+.package-footer{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+}
+
+.price small{
+
+  display:block;
+
+  color:var(--muted);
+
+  font-size:9px;
+
+}
+
+.price strong{
+
+  color:var(--navy);
+
+  font-size:21px;
+
+}
+
+.package-btn{
+
+  border:0;
+
+  border-radius:9px;
+
+  padding:10px 13px;
+
+  background:#e9f8ff;
+
+  color:var(--primary-dark);
+
+  font-size:11px;
+
+  font-weight:800;
+
+}
+
+.package-btn:hover{
+
+  background:var(--primary);
+
+  color:white;
+
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about{
+
+  background:white;
+
+}
+
+.about-grid{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:70px;
+
+  align-items:center;
+
+}
+
+.about-image{
+
+  height:530px;
+
+  position:relative;
+
+}
+
+.about-image-main{
+
+  height:100%;
+
+  border-radius:26px;
+
+  overflow:hidden;
+
+}
+
+.about-image-main img{
+
+  height:100%;
+
+}
+
+.about-card{
+
+  position:absolute;
+
+  right:-25px;
+
+  bottom:25px;
+
+  background:white;
+
+  padding:17px 20px;
+
+  border-radius:17px;
+
+  box-shadow:var(--shadow);
+
+  display:flex;
+
+  align-items:center;
+
+  gap:11px;
+
+}
+
+.about-card-icon{
+
+  width:43px;
+
+  height:43px;
+
+  background:#fff4d7;
+
+  color:#d79500;
+
+  border-radius:11px;
+
+  display:grid;
+
+  place-items:center;
+
+}
+
+.about-card strong{
+
+  display:block;
+
+  color:var(--navy);
+
+  font-size:20px;
+
+}
+
+.about-card span{
+
+  color:var(--muted);
+
+  font-size:10px;
+
+}
+
+.about-content .section-label{
+
+  margin-bottom:9px;
+
+}
+
+.about-content h2{
+
+  color:var(--navy);
+
+  font-size:clamp(31px,4vw,45px);
+
+  line-height:1.15;
+
+  margin-bottom:16px;
+
+}
+
+.about-content>p{
+
+  color:var(--muted);
+
+  font-size:14px;
+
+  margin-bottom:27px;
+
+}
+
+.feature-grid{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:19px;
+
+}
+
+.feature{
+
+  display:flex;
+
+  gap:12px;
+
+}
+
+.feature-icon{
+
+  min-width:43px;
+
+  height:43px;
+
+  border-radius:11px;
+
+  background:#e9f8ff;
+
+  color:var(--primary);
+
+  display:grid;
+
+  place-items:center;
+
+}
+
+.feature h4{
+
+  color:var(--navy);
+
+  font-size:13px;
+
+  margin-bottom:2px;
+
+}
+
+.feature p{
+
+  color:var(--muted);
+
+  font-size:10px;
+
+  line-height:1.5;
+
+}
+
+
+/* =========================================================
+   STATS SECTION
+========================================================= */
+
+.stats{
+
+  background:var(--navy);
+
+  padding:65px 0;
+
+}
+
+.stats-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+}
+
+.stat-box{
+
+  text-align:center;
+
+  color:white;
+
+  padding:10px 20px;
+
+  border-right:1px solid rgba(255,255,255,.1);
+
+}
+
+.stat-box:last-child{
+
+  border-right:0;
+
+}
+
+.stat-box i{
+
+  color:var(--yellow);
+
+  font-size:20px;
+
+  margin-bottom:7px;
+
+}
+
+.stat-box strong{
+
+  display:block;
+
+  font-family:"Poppins",sans-serif;
+
+  font-size:30px;
+
+}
+
+.stat-box span{
+
+  color:#9eb0bc;
+
+  font-size:11px;
+
+}
+
+
+/* =========================================================
+   HOW IT WORKS
+========================================================= */
+
+.how{
+
+  background:var(--bg);
+
+}
+
+.steps{
+
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:20px;
+
+  position:relative;
+
+}
+
+.steps::before{
+
+  content:"";
+
+  position:absolute;
+
+  left:13%;
+
+  right:13%;
+
+  top:31px;
+
+  border-top:1px dashed #c9d9e2;
+
+}
+
+.step{
+
+  text-align:center;
+
+  position:relative;
+
+  z-index:2;
+
+}
+
+.step-number{
+
+  width:63px;
+
+  height:63px;
+
+  border-radius:50%;
+
+  background:var(--primary);
+
+  color:white;
+
+  display:grid;
+
+  place-items:center;
+
+  margin:0 auto 18px;
+
+  border:6px solid var(--bg);
+
+  font-size:17px;
+
+  font-weight:800;
+
+  box-shadow:0 0 0 1px #bcd5e0;
+
+}
+
+.step h3{
+
+  color:var(--navy);
+
+  font-size:15px;
+
+  margin-bottom:6px;
+
+}
+
+.step p{
+
+  color:var(--muted);
+
+  font-size:11px;
+
+  max-width:210px;
+
+  margin:auto;
+
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery{
+
+  background:white;
+
+}
+
+.gallery-grid{
+
+  display:grid;
+
+  grid-template-columns:2fr 1fr 1fr;
+
+  grid-template-rows:220px 220px;
+
+  gap:12px;
+
+}
+
+.gallery-item{
+
+  overflow:hidden;
+
+  border-radius:16px;
+
+  position:relative;
+
+}
+
+.gallery-item:first-child{
+
+  grid-row:span 2;
+
+}
+
+.gallery-item img{
+
+  width:100%;
+
+  height:100%;
+
+  transition:.5s ease;
+
+}
+
+.gallery-item:hover img{
+
+  transform:scale(1.07);
+
+}
+
+.gallery-overlay{
+
+  position:absolute;
+
+  inset:0;
+
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,.65),
+    transparent 60%
+  );
+
+  display:flex;
+
+  align-items:flex-end;
+
+  padding:17px;
+
+  color:white;
+
+  font-size:13px;
+
+  font-weight:700;
+
+}
+
+
+/* =========================================================
+   DISCOVER
+========================================================= */
+
+.discover{
+
+  padding:90px 0;
+
+}
+
+.discover-box{
+
+  min-height:430px;
+
+  border-radius:27px;
+
+  overflow:hidden;
+
+  position:relative;
+
+  display:flex;
+
+  align-items:center;
+
+  padding:55px;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(4,18,30,.92),
+      rgba(4,18,30,.46),
+      rgba(4,18,30,.05)
+    ),
+
+    url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=90")
+    center/cover no-repeat;
+
+}
+
+.discover-content{
+
+  max-width:570px;
+
+  color:white;
+
+}
+
+.discover-content .section-label{
+
+  color:var(--yellow);
+
+  background:rgba(255,200,87,.13);
+
+}
+
+.discover-content h2{
+
+  font-size:clamp(32px,4vw,49px);
+
+  line-height:1.1;
+
+  margin-bottom:15px;
+
+}
+
+.discover-content p{
+
+  color:#dfebf1;
+
+  font-size:13px;
+
+  margin-bottom:24px;
+
+}
+
+
+/* =========================================================
+   REVIEWS
+========================================================= */
+
+.reviews{
+
+  background:var(--bg);
+
+}
+
+.review-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:20px;
+
+}
+
+.review-card{
+
+  background:white;
+
+  border-radius:var(--radius);
+
+  padding:27px;
+
+  box-shadow:var(--shadow-small);
+
+}
+
+.stars{
+
+  color:#f6b51c;
+
+  font-size:13px;
+
+  letter-spacing:1px;
+
+  margin-bottom:14px;
+
+}
+
+.review-card>p{
+
+  color:#536273;
+
+  font-size:13px;
+
+  line-height:1.8;
+
+  margin-bottom:21px;
+
+}
+
+.reviewer{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:11px;
+
+}
+
+.avatar{
+
+  width:43px;
+
+  height:43px;
+
+  border-radius:50%;
+
+  display:grid;
+
+  place-items:center;
+
+  background:#e1f6ff;
+
+  color:var(--primary-dark);
+
+  font-weight:800;
+
+}
+
+.reviewer strong{
+
+  display:block;
+
+  color:var(--navy);
+
+  font-size:12px;
+
+}
+
+.reviewer span{
+
+  color:var(--muted);
+
+  font-size:10px;
+
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq{
+
+  background:white;
+
+}
+
+.faq-wrapper{
+
+  max-width:800px;
+
+  margin:auto;
+
+}
+
+.faq-item{
+
+  border:1px solid var(--border);
+
+  border-radius:13px;
+
+  margin-bottom:11px;
+
+  overflow:hidden;
+
+}
+
+.faq-question{
+
+  width:100%;
+
+  border:0;
+
+  background:white;
+
+  padding:17px 18px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  text-align:left;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  color:var(--navy);
+
+}
+
+.faq-question i{
+
+  color:var(--primary);
+
+  transition:var(--transition);
+
+}
+
+.faq-answer{
+
+  max-height:0;
+
+  overflow:hidden;
+
+  transition:max-height .3s ease;
+
+}
+
+.faq-answer p{
+
+  padding:0 18px 17px;
+
+  color:var(--muted);
+
+  font-size:12px;
+
+}
+
+.faq-item.active .faq-answer{
+
+  max-height:200px;
+
+}
+
+.faq-item.active .faq-question i{
+
+  transform:rotate(180deg);
+
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta{
+
+  padding:90px 0;
+
+}
+
+.cta-box{
+
+  background:linear-gradient(
+    135deg,
+    var(--primary),
+    #087bb4
+  );
+
+  border-radius:26px;
+
+  padding:55px;
+
+  color:white;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:30px;
+
+  overflow:hidden;
+
+  position:relative;
+
+}
+
+.cta-box::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:300px;
+
+  height:300px;
+
+  border:35px solid rgba(255,255,255,.08);
+
+  border-radius:50%;
+
+  right:-100px;
+
+  top:-120px;
+
+}
+
+.cta-content{
+
+  position:relative;
+
+  z-index:2;
+
+}
+
+.cta-content h2{
+
+  font-size:clamp(28px,4vw,41px);
+
+  margin-bottom:7px;
+
+}
+
+.cta-content p{
+
+  color:#e0f7ff;
+
+  font-size:13px;
+
+}
+
+.cta-box .btn{
+
+  position:relative;
+
+  z-index:2;
+
+  background:white;
+
+  color:var(--primary-dark);
+
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact{
+
+  background:var(--bg);
+
+}
+
+.contact-grid{
+
+  display:grid;
+
+  grid-template-columns:.8fr 1.2fr;
+
+  gap:35px;
+
+  align-items:stretch;
+
+}
+
+.contact-info{
+
+  background:var(--navy);
+
+  color:white;
+
+  border-radius:22px;
+
+  padding:35px;
+
+}
+
+.contact-info h2{
+
+  font-size:30px;
+
+  margin-bottom:10px;
+
+}
+
+.contact-info>p{
+
+  color:#aebfca;
+
+  font-size:12px;
+
+  margin-bottom:27px;
+
+}
+
+.contact-detail{
+
+  display:flex;
+
+  gap:12px;
+
+  margin-bottom:18px;
+
+}
+
+.contact-detail-icon{
+
+  width:39px;
+
+  height:39px;
+
+  min-width:39px;
+
+  background:rgba(255,255,255,.08);
+
+  color:var(--yellow);
+
+  display:grid;
+
+  place-items:center;
+
+  border-radius:10px;
+
+}
+
+.contact-detail strong{
+
+  display:block;
+
+  font-size:12px;
+
+}
+
+.contact-detail span{
+
+  color:#aebfca;
+
+  font-size:11px;
+
+}
+
+.contact-form{
+
+  background:white;
+
+  padding:32px;
+
+  border-radius:22px;
+
+  box-shadow:var(--shadow-small);
+
+}
+
+.form-grid{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:15px;
+
+}
+
+.form-group{
+
+  margin-bottom:15px;
+
+}
+
+.form-group.full{
+
+  grid-column:1/-1;
+
+}
+
+.form-group label{
+
+  display:block;
+
+  font-size:11px;
+
+  font-weight:700;
+
+  margin-bottom:6px;
+
+  color:var(--navy);
+
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+  width:100%;
+
+  border:1px solid var(--border);
+
+  border-radius:10px;
+
+  outline:none;
+
+  padding:12px;
+
+  font-size:12px;
+
+  color:var(--text);
+
+  background:white;
+
+  resize:vertical;
+
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+  border-color:var(--primary);
+
+}
+
+.send-btn{
+
+  width:100%;
+
+  border:0;
+
+  border-radius:10px;
+
+  padding:13px;
+
+  background:var(--primary);
+
+  color:white;
+
+  font-weight:800;
+
+  font-size:12px;
+
+}
+
+.send-btn:hover{
+
+  background:var(--primary-dark);
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+  background:#04121e;
+
+  color:#b8c7d1;
+
+  padding-top:65px;
+
+}
+
+.footer-grid{
+
+  display:grid;
+
+  grid-template-columns:1.5fr 1fr 1fr 1.3fr;
+
+  gap:45px;
+
+  padding-bottom:50px;
+
+}
+
+.footer-logo{
+
+  color:white;
+
+  margin-bottom:15px;
+
+}
+
+.footer-about{
+
+  max-width:310px;
+
+  color:#93a7b4;
+
+  font-size:12px;
+
+  line-height:1.8;
+
+  margin-bottom:19px;
+
+}
+
+.socials{
+
+  display:flex;
+
+  gap:8px;
+
+}
+
+.socials a{
+
+  width:36px;
+
+  height:36px;
+
+  border-radius:9px;
+
+  background:rgba(255,255,255,.07);
+
+  display:grid;
+
+  place-items:center;
+
+  transition:var(--transition);
+
+}
+
+.socials a:hover{
+
+  background:var(--primary);
+
+  color:white;
+
+}
+
+.footer-col h3{
+
+  color:white;
+
+  font-size:14px;
+
+  margin-bottom:17px;
+
+}
+
+.footer-col ul{
+
+  list-style:none;
+
+}
+
+.footer-col li{
+
+  margin-bottom:9px;
+
+  font-size:11px;
+
+}
+
+.footer-col li a:hover{
+
+  color:var(--primary);
+
+}
+
+.footer-contact{
+
+  display:flex;
+
+  gap:9px;
+
+  margin-bottom:12px;
+
+  font-size:11px;
+
+}
+
+.footer-contact i{
+
+  color:var(--yellow);
+
+  width:14px;
+
+  margin-top:3px;
+
+}
+
+.footer-bottom{
+
+  border-top:1px solid rgba(255,255,255,.08);
+
+  padding:18px 0;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:15px;
+
+  font-size:10px;
+
+  color:#7f95a2;
+
+}
+
+
+/* =========================================================
+   BOOKING MODAL
+========================================================= */
+
+.modal{
+
+  position:fixed;
+
+  inset:0;
+
+  background:rgba(2,12,20,.76);
+
+  backdrop-filter:blur(8px);
+
+  display:none;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:20px;
+
+  z-index:5000;
+
+}
+
+.modal.active{
+
+  display:flex;
+
+}
+
+.modal-box{
+
+  width:min(550px,100%);
+
+  max-height:90vh;
+
+  overflow:auto;
+
+  background:white;
+
+  border-radius:23px;
+
+  padding:30px;
+
+  position:relative;
+
+  animation:modalOpen .3s ease;
+
+}
+
+@keyframes modalOpen{
+
+  from{
+
+    opacity:0;
+
+    transform:translateY(20px) scale(.98);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:translateY(0) scale(1);
+
+  }
+
+}
+
+.close-modal{
+
+  position:absolute;
+
+  top:16px;
+
+  right:16px;
+
+  width:36px;
+
+  height:36px;
+
+  border:0;
+
+  border-radius:50%;
+
+  background:#f1f5f7;
+
+  color:var(--navy);
+
+}
+
+.modal-box h2{
+
+  color:var(--navy);
+
+  font-size:25px;
+
+  margin-bottom:4px;
+
+}
+
+.modal-subtitle{
+
+  color:var(--muted);
+
+  font-size:12px;
+
+  margin-bottom:20px;
+
+}
+
+.modal-row{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:12px;
+
+}
+
+.modal-submit{
+
+  width:100%;
+
+  border:0;
+
+  padding:14px;
+
+  border-radius:11px;
+
+  background:var(--primary);
+
+  color:white;
+
+  font-weight:800;
+
+  font-size:12px;
+
+}
+
+.modal-submit:hover{
+
+  background:var(--primary-dark);
+
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast{
+
+  position:fixed;
+
+  right:20px;
+
+  bottom:20px;
+
+  z-index:9000;
+
+  background:var(--navy);
+
+  color:white;
+
+  padding:14px 18px;
+
+  border-radius:12px;
+
+  font-size:12px;
+
+  box-shadow:var(--shadow);
+
+  opacity:0;
+
+  transform:translateY(80px);
+
+  pointer-events:none;
+
+  transition:.35s ease;
+
+}
+
+.toast.show{
+
+  opacity:1;
+
+  transform:translateY(0);
+
+}
+
+.toast i{
+
+  color:#4ade80;
+
+}
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.back-top{
+
+  position:fixed;
+
+  right:20px;
+
+  bottom:75px;
+
+  width:42px;
+
+  height:42px;
+
+  border:0;
+
+  border-radius:12px;
+
+  background:var(--primary);
+
+  color:white;
+
+  display:grid;
+
+  place-items:center;
+
+  z-index:2000;
+
+  opacity:0;
+
+  visibility:hidden;
+
+  transform:translateY(10px);
+
+  transition:var(--transition);
+
+}
+
+.back-top.show{
+
+  opacity:1;
+
+  visibility:visible;
+
+  transform:translateY(0);
+
+}
+
+.back-top:hover{
+
+  background:var(--primary-dark);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1100px){
+
+  .nav-links{
+
+    gap:17px;
+
+  }
+
+  .search-box{
+
+    grid-template-columns:1fr 1fr;
+
+  }
+
+  .search-btn{
+
+    min-height:48px;
+
+  }
+
+  .destination-grid,
+  .package-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+  }
+
+  .footer-grid{
+
+    grid-template-columns:1fr 1fr;
+
+  }
+
+}
+
+@media(max-width:850px){
+
+  .topbar{
+
+    display:none;
+
+  }
+
+  header{
+
+    top:14px;
+
+  }
+
+  .navbar{
+
+    min-height:65px;
+
+  }
+
+  .menu-btn{
+
+    display:block;
+
+  }
+
+  .nav-links{
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    top:75px;
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:13px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:stretch;
+
+    gap:2px;
+
+    box-shadow:var(--shadow);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(-10px);
+
+    transition:.3s ease;
+
+  }
+
+  .nav-links.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+  }
+
+  .nav-links a{
+
+    display:block;
+
+    padding:11px;
+
+  }
+
+  .book-nav{
+
+    text-align:center;
+
+  }
+
+  .hero{
+
+    min-height:740px;
+
+    padding-top:130px;
+
+  }
+
+  .hero-content{
+
+    padding-bottom:130px;
+
+  }
+
+  .hero h1{
+
+    font-size:48px;
+
+  }
+
+  .search-area{
+
+    bottom:-145px;
+
+  }
+
+  .destinations{
+
+    padding-top:230px;
+
+  }
+
+  .about-grid{
+
+    grid-template-columns:1fr;
+
+    gap:45px;
+
+  }
+
+  .about-card{
+
+    right:15px;
+
+  }
+
+  .stats-grid{
+
+    grid-template-columns:1fr 1fr;
+
+    row-gap:30px;
+
+  }
+
+  .stat-box:nth-child(2){
+
+    border-right:0;
+
+  }
+
+  .steps{
+
+    grid-template-columns:1fr 1fr;
+
+    row-gap:35px;
+
+  }
+
+  .steps::before{
+
+    display:none;
+
+  }
+
+  .contact-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .cta-box{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+  }
+
+}
+
+@media(max-width:600px){
+
+  section{
+
+    padding:75px 0;
+
+  }
+
+  .hero h1{
+
+    font-size:40px;
+
+    letter-spacing:-1px;
+
+  }
+
+  .hero-description{
+
+    font-size:13px;
+
+  }
+
+  .hero-stats{
+
+    gap:17px;
+
+  }
+
+  .hero-stat{
+
+    gap:7px;
+
+  }
+
+  .destination-grid,
+  .package-grid,
+  .review-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .destination-card{
+
+    height:280px;
+
+  }
+
+  .feature-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .about-image{
+
+    height:390px;
+
+  }
+
+  .stats-grid{
+
+    grid-template-columns:1fr 1fr;
+
+  }
+
+  .stat-box{
+
+    border-right:0;
+
+  }
+
+  .steps{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .gallery-grid{
+
+    grid-template-columns:1fr 1fr;
+
+    grid-template-rows:180px 180px 180px;
+
+  }
+
+  .gallery-item:first-child{
+
+    grid-row:span 2;
+
+  }
+
+  .gallery-item:nth-child(4){
+
+    grid-column:span 2;
+
+  }
+
+  .discover-box{
+
+    min-height:500px;
+
+    padding:30px;
+
+  }
+
+  .cta-box{
+
+    padding:35px 25px;
+
+  }
+
+  .contact-form{
+
+    padding:24px;
+
+  }
+
+  .form-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .form-group.full{
+
+    grid-column:auto;
+
+  }
+
+  .modal-row{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .footer-grid{
+
+    grid-template-columns:1fr;
+
+    gap:30px;
+
+  }
+
+  .footer-bottom{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+  }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-  <!-- =========================
-       TOP BAR
-  ========================== -->
 
-  <div class="topbar">
-    <div class="container topbar-content">
+<!-- =======================================================
+     TOP BAR
+======================================================== -->
 
-      <div class="topbar-left">
-        <span>
-          <i class="fa-solid fa-phone"></i>
-          +880 1XXX-XXXXXX
-        </span>
+<div class="topbar">
 
-        <span>
-          <i class="fa-solid fa-envelope"></i>
-          hello@neilushatour.com
-        </span>
-      </div>
+  <div class="container topbar-content">
 
-      <div class="topbar-right">
-        <span>
-          <i class="fa-solid fa-clock"></i>
-          Mon - Sun: 24/7 Support
-        </span>
-      </div>
+    <div class="topbar-left">
+
+      <span>
+        <i class="fa-solid fa-phone"></i>
+        +880 1XXX-XXXXXX
+      </span>
+
+      <span>
+        <i class="fa-solid fa-envelope"></i>
+        hello@neilushatour.com
+      </span>
 
     </div>
+
+    <div class="topbar-right">
+
+      <span>
+        <i class="fa-solid fa-headset"></i>
+        24/7 Travel Support
+      </span>
+
+    </div>
+
   </div>
 
-
-  <!-- =========================
-       NAVBAR
-  ========================== -->
-
-  <header>
-    <div class="container">
-
-      <nav class="navbar">
-
-        <a href="#home" class="logo">
-          <div class="logo-icon">
-            <i class="fa-solid fa-location-dot"></i>
-          </div>
-
-          Neilusha <span>Tour Guide</span>
-        </a>
-
-        <button class="menu-btn" id="menuBtn" aria-label="Open Menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-
-        <ul class="nav-links" id="navLinks">
-
-          <li>
-            <a href="#home">Home</a>
-          </li>
-
-          <li>
-            <a href="#destinations">Destinations</a>
-          </li>
-
-          <li>
-            <a href="#tours">Tour Packages</a>
-          </li>
-
-          <li>
-            <a href="#why">About Us</a>
-          </li>
-
-          <li>
-            <a href="#reviews">Reviews</a>
-          </li>
-
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-
-          <li>
-            <a href="#" class="nav-book" onclick="openBooking(); return false;">
-              Book a Tour
-            </a>
-          </li>
-
-        </ul>
-
-      </nav>
-
-    </div>
-  </header>
+</div>
 
 
-  <!-- =========================
-       HERO
-  ========================== -->
 
-  <section class="hero" id="home">
+<!-- =======================================================
+     NAVBAR
+======================================================== -->
 
-    <div class="container">
+<header>
 
-      <div class="hero-content">
+  <div class="container">
 
-        <div class="hero-tag">
-          <i class="fa-solid fa-earth-asia"></i>
-          Explore Bangladesh With Us
-        </div>
+    <nav class="navbar">
 
-        <h1>
-          Discover Bangladesh,
-          <span>Your Way.</span>
-        </h1>
+      <a href="#home" class="logo">
 
-        <p>
-          Explore beautiful destinations, unforgettable experiences
-          and carefully planned tours with Neilusha Tour Guide.
-          Your journey starts here.
-        </p>
-
-        <div class="hero-buttons">
-
-          <a href="#tours" class="btn btn-primary">
-            Explore Tours
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-
-          <button class="btn btn-outline" onclick="openBooking()">
-            <i class="fa-solid fa-calendar-check"></i>
-            Plan My Trip
-          </button>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- SEARCH -->
-
-    <div class="search-wrapper">
-
-      <form class="search-box" id="searchForm">
-
-        <div class="search-field">
-
+        <div class="logo-icon">
           <i class="fa-solid fa-location-dot"></i>
-
-          <div style="width:100%">
-            <label>Destination</label>
-
-            <select id="destination">
-              <option value="">Where do you want to go?</option>
-              <option>Cox's Bazar</option>
-              <option>Sajek Valley</option>
-              <option>Sylhet</option>
-              <option>Ratargul</option>
-              <option>Bandarban</option>
-              <option>Sundarbans</option>
-            </select>
-          </div>
-
         </div>
 
+        Neilusha <span>Tour Guide</span>
 
-        <div class="search-field">
+      </a>
 
-          <i class="fa-regular fa-calendar"></i>
 
-          <div style="width:100%">
-            <label>Travel Date</label>
+      <button class="menu-btn" id="menuBtn">
 
-            <input
-              type="date"
-              id="travelDate"
-            />
-          </div>
+        <i class="fa-solid fa-bars"></i>
 
-        </div>
-
-
-        <div class="search-field">
-
-          <i class="fa-solid fa-user-group"></i>
-
-          <div style="width:100%">
-            <label>Travelers</label>
-
-            <select id="travelers">
-              <option value="1">1 Traveler</option>
-              <option value="2">2 Travelers</option>
-              <option value="3">3 Travelers</option>
-              <option value="4">4 Travelers</option>
-              <option value="5">5 Travelers</option>
-              <option value="6+">6+ Travelers</option>
-            </select>
-          </div>
-
-        </div>
-
-
-        <div class="search-field">
-
-          <i class="fa-solid fa-wallet"></i>
-
-          <div style="width:100%">
-            <label>Budget</label>
-
-            <select>
-              <option>Any Budget</option>
-              <option>Under ৳5,000</option>
-              <option>৳5,000 - ৳10,000</option>
-              <option>৳10,000+</option>
-            </select>
-          </div>
-
-        </div>
-
-
-        <button class="search-btn" type="submit">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          Search
-        </button>
-
-      </form>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       DESTINATIONS
-  ========================== -->
-
-  <section class="destinations" id="destinations">
-
-    <div class="container">
-
-      <div class="section-head">
-
-        <span class="section-label">
-          Popular Places
-        </span>
-
-        <h2>
-          Explore Amazing Destinations
-        </h2>
-
-        <p>
-          From beaches to mountains and forests,
-          discover some of the most beautiful places in Bangladesh.
-        </p>
-
-      </div>
-
-
-      <div class="destination-grid">
-
-
-        <div class="destination-card">
-
-          <img
-            src="https://images.unsplash.com/photo-1609947017136-9daf32a5eb16?auto=format&fit=crop&w=1000&q=80"
-            alt="Cox's Bazar"
-          />
-
-          <div class="destination-overlay">
-
-            <span class="destination-location">
-              Chattogram Division
-            </span>
-
-            <h3>Cox's Bazar</h3>
-
-            <p>
-              The world's longest natural sea beach.
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <div class="destination-card">
-
-          <img
-            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80"
-            alt="Sajek Valley"
-          />
-
-          <div class="destination-overlay">
-
-            <span class="destination-location">
-              Rangamati
-            </span>
-
-            <h3>Sajek Valley</h3>
-
-            <p>
-              Clouds, hills and breathtaking views.
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <div class="destination-card">
-
-          <img
-            src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1000&q=80"
-            alt="Sylhet"
-          />
-
-          <div class="destination-overlay">
-
-            <span class="destination-location">
-              Sylhet
-            </span>
-
-            <h3>Sylhet</h3>
-
-            <p>
-              Tea gardens, waterfalls and green landscapes.
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <div class="destination-card">
-
-          <img
-            src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=80"
-            alt="Ratargul"
-          />
-
-          <div class="destination-overlay">
-
-            <span class="destination-location">
-              Sylhet
-            </span>
-
-            <h3>Ratargul</h3>
-
-            <p>
-              Discover the magical freshwater swamp forest.
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <div class="destination-card">
-
-          <img
-            src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1000&q=80"
-            alt="Bandarban"
-          />
-
-          <div class="destination-overlay">
-
-            <span class="destination-location">
-              Chattogram Hill Tracts
-            </span>
-
-            <h3>Bandarban</h3>
-
-            <p>
-              Mountains, waterfalls and adventure.
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <div class="destination-card">
-
-          <img
-            src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1000&q=80"
-            alt="Sundarbans"
-          />
-
-          <div class="destination-overlay">
-
-            <span class="destination-location">
-              Khulna
-            </span>
-
-            <h3>Sundarbans</h3>
-
-            <p>
-              A wild world of mangrove forests.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       TOUR PACKAGES
-  ========================== -->
-
-  <section class="tours" id="tours">
-
-    <div class="container">
-
-      <div class="section-head">
-
-        <span class="section-label">
-          Best Packages
-        </span>
-
-        <h2>
-          Popular Tour Packages
-        </h2>
-
-        <p>
-          Choose a package and let us take care of the rest.
-        </p>
-
-      </div>
-
-
-      <div class="tour-grid">
-
-
-        <!-- TOUR 1 -->
-
-        <div class="tour-card">
-
-          <div class="tour-image">
-
-            <img
-              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80"
-              alt="Cox's Bazar Tour"
-            />
-
-            <span class="tour-badge">
-              BEST SELLER
-            </span>
-
-          </div>
-
-          <div class="tour-body">
-
-            <div class="tour-location">
-              <i class="fa-solid fa-location-dot"></i>
-              Cox's Bazar
-            </div>
-
-            <h3>Cox's Bazar Escape</h3>
-
-            <p class="tour-description">
-              Enjoy the sea beach, sunset and relaxing coastal moments.
-            </p>
-
-            <div class="tour-meta">
-
-              <span>
-                <i class="fa-regular fa-clock"></i>
-                3 Days
-              </span>
-
-              <span>
-                <i class="fa-solid fa-users"></i>
-                2-10
-              </span>
-
-            </div>
-
-            <div class="tour-footer">
-
-              <div class="price">
-                <small>Starting from</small>
-                <strong>৳5,999</strong>
-              </div>
-
-              <button
-                class="tour-btn"
-                onclick="openBooking('Cox\\'s Bazar Escape')"
-              >
-                View Details
-              </button>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- TOUR 2 -->
-
-        <div class="tour-card">
-
-          <div class="tour-image">
-
-            <img
-              src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1000&q=80"
-              alt="Sajek Tour"
-            />
-
-            <span class="tour-badge">
-              ADVENTURE
-            </span>
-
-          </div>
-
-          <div class="tour-body">
-
-            <div class="tour-location">
-              <i class="fa-solid fa-location-dot"></i>
-              Rangamati
-            </div>
-
-            <h3>Sajek Adventure</h3>
-
-            <p class="tour-description">
-              Experience the clouds, hills and beautiful mountain roads.
-            </p>
-
-            <div class="tour-meta">
-
-              <span>
-                <i class="fa-regular fa-clock"></i>
-                2 Days
-              </span>
-
-              <span>
-                <i class="fa-solid fa-users"></i>
-                2-8
-              </span>
-
-            </div>
-
-            <div class="tour-footer">
-
-              <div class="price">
-                <small>Starting from</small>
-                <strong>৳4,499</strong>
-              </div>
-
-              <button
-                class="tour-btn"
-                onclick="openBooking('Sajek Adventure')"
-              >
-                View Details
-              </button>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- TOUR 3 -->
-
-        <div class="tour-card">
-
-          <div class="tour-image">
-
-            <img
-              src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=80"
-              alt="Sylhet Tour"
-            />
-
-            <span class="tour-badge">
-              NATURE
-            </span>
-
-          </div>
-
-          <div class="tour-body">
-
-            <div class="tour-location">
-              <i class="fa-solid fa-location-dot"></i>
-              Sylhet
-            </div>
-
-            <h3>Sylhet Nature Tour</h3>
-
-            <p class="tour-description">
-              Explore tea gardens, waterfalls and peaceful green forests.
-            </p>
-
-            <div class="tour-meta">
-
-              <span>
-                <i class="fa-regular fa-clock"></i>
-                3 Days
-              </span>
-
-              <span>
-                <i class="fa-solid fa-users"></i>
-                2-12
-              </span>
-
-            </div>
-
-            <div class="tour-footer">
-
-              <div class="price">
-                <small>Starting from</small>
-                <strong>৳6,499</strong>
-              </div>
-
-              <button
-                class="tour-btn"
-                onclick="openBooking('Sylhet Nature Tour')"
-              >
-                View Details
-              </button>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- TOUR 4 -->
-
-        <div class="tour-card">
-
-          <div class="tour-image">
-
-            <img
-              src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1000&q=80"
-              alt="Bandarban Tour"
-            />
-
-            <span class="tour-badge">
-              PREMIUM
-            </span>
-
-          </div>
-
-          <div class="tour-body">
-
-            <div class="tour-location">
-              <i class="fa-solid fa-location-dot"></i>
-              Bandarban
-            </div>
-
-            <h3>Bandarban Explorer</h3>
-
-            <p class="tour-description">
-              Mountains, waterfalls and an unforgettable hill adventure.
-            </p>
-
-            <div class="tour-meta">
-
-              <span>
-                <i class="fa-regular fa-clock"></i>
-                3 Days
-              </span>
-
-              <span>
-                <i class="fa-solid fa-users"></i>
-                2-8
-              </span>
-
-            </div>
-
-            <div class="tour-footer">
-
-              <div class="price">
-                <small>Starting from</small>
-                <strong>৳7,999</strong>
-              </div>
-
-              <button
-                class="tour-btn"
-                onclick="openBooking('Bandarban Explorer')"
-              >
-                View Details
-              </button>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- TOUR 5 -->
-
-        <div class="tour-card">
-
-          <div class="tour-image">
-
-            <img
-              src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=80"
-              alt="Sundarbans Tour"
-            />
-
-            <span class="tour-badge">
-              WILDLIFE
-            </span>
-
-          </div>
-
-          <div class="tour-body">
-
-            <div class="tour-location">
-              <i class="fa-solid fa-location-dot"></i>
-              Khulna
-            </div>
-
-            <h3>Sundarbans Explorer</h3>
-
-            <p class="tour-description">
-              Cruise through the world's largest mangrove forest.
-            </p>
-
-            <div class="tour-meta">
-
-              <span>
-                <i class="fa-regular fa-clock"></i>
-                3 Days
-              </span>
-
-              <span>
-                <i class="fa-solid fa-users"></i>
-                4-15
-              </span>
-
-            </div>
-
-            <div class="tour-footer">
-
-              <div class="price">
-                <small>Starting from</small>
-                <strong>৳8,499</strong>
-              </div>
-
-              <button
-                class="tour-btn"
-                onclick="openBooking('Sundarbans Explorer')"
-              >
-                View Details
-              </button>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- TOUR 6 -->
-
-        <div class="tour-card">
-
-          <div class="tour-image">
-
-            <img
-              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80"
-              alt="Ratargul Tour"
-            />
-
-            <span class="tour-badge">
-              WEEKEND
-            </span>
-
-          </div>
-
-          <div class="tour-body">
-
-            <div class="tour-location">
-              <i class="fa-solid fa-location-dot"></i>
-              Sylhet
-            </div>
-
-            <h3>Ratargul Weekend</h3>
-
-            <p class="tour-description">
-              A peaceful weekend escape surrounded by nature.
-            </p>
-
-            <div class="tour-meta">
-
-              <span>
-                <i class="fa-regular fa-clock"></i>
-                2 Days
-              </span>
-
-              <span>
-                <i class="fa-solid fa-users"></i>
-                2-10
-              </span>
-
-            </div>
-
-            <div class="tour-footer">
-
-              <div class="price">
-                <small>Starting from</small>
-                <strong>৳3,999</strong>
-              </div>
-
-              <button
-                class="tour-btn"
-                onclick="openBooking('Ratargul Weekend')"
-              >
-                View Details
-              </button>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       WHY US
-  ========================== -->
-
-  <section class="why-us" id="why">
-
-    <div class="container">
-
-      <div class="why-grid">
-
-
-        <div class="why-image">
-
-          <div class="why-image-main">
-
-            <img
-              src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1200&q=85"
-              alt="Travel experience"
-            />
-
-          </div>
-
-
-          <div class="experience-box">
-
-            <div class="experience-icon">
-              <i class="fa-solid fa-award"></i>
-            </div>
-
-            <div>
-              <strong>100+</strong>
-              <span>Happy Travelers</span>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="why-content">
-
-          <span class="section-label">
-            Why Neilusha
-          </span>
-
-          <h2>
-            Travel More.<br />
-            Worry Less.
-          </h2>
-
-          <p>
-            We believe travelling should be exciting, comfortable
-            and stress-free. Our team helps you discover Bangladesh
-            with carefully planned trips and friendly local support.
-          </p>
-
-
-          <div class="feature-list">
-
-
-            <div class="feature">
-
-              <div class="feature-icon">
-                <i class="fa-solid fa-compass"></i>
-              </div>
-
-              <div>
-                <h4>Local Expert Guides</h4>
-
-                <p>
-                  Travel with people who know the destination.
-                </p>
-              </div>
-
-            </div>
-
-
-            <div class="feature">
-
-              <div class="feature-icon">
-                <i class="fa-solid fa-shield-heart"></i>
-              </div>
-
-              <div>
-                <h4>Safe & Trusted</h4>
-
-                <p>
-                  Your comfort and safety come first.
-                </p>
-              </div>
-
-            </div>
-
-
-            <div class="feature">
-
-              <div class="feature-icon">
-                <i class="fa-solid fa-wallet"></i>
-              </div>
-
-              <div>
-                <h4>Best Tour Value</h4>
-
-                <p>
-                  Great experiences at reasonable prices.
-                </p>
-              </div>
-
-            </div>
-
-
-            <div class="feature">
-
-              <div class="feature-icon">
-                <i class="fa-solid fa-headset"></i>
-              </div>
-
-              <div>
-                <h4>24/7 Support</h4>
-
-                <p>
-                  We are here whenever you need us.
-                </p>
-              </div>
-
-            </div>
-
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       HOW IT WORKS
-  ========================== -->
-
-  <section class="how">
-
-    <div class="container">
-
-      <div class="section-head">
-
-        <span class="section-label">
-          Simple Process
-        </span>
-
-        <h2>
-          Your Journey in 4 Easy Steps
-        </h2>
-
-        <p>
-          Planning your next trip doesn't have to be complicated.
-        </p>
-
-      </div>
-
-
-      <div class="steps">
-
-
-        <div class="step">
-
-          <div class="step-number">
-            01
-          </div>
-
-          <h3>Choose Destination</h3>
-
-          <p>
-            Pick your dream destination from our tour collection.
-          </p>
-
-        </div>
-
-
-        <div class="step">
-
-          <div class="step-number">
-            02
-          </div>
-
-          <h3>Select Package</h3>
-
-          <p>
-            Choose a package that matches your budget and time.
-          </p>
-
-        </div>
-
-
-        <div class="step">
-
-          <div class="step-number">
-            03
-          </div>
-
-          <h3>Confirm Booking</h3>
-
-          <p>
-            Send your details and confirm your travel plan.
-          </p>
-
-        </div>
-
-
-        <div class="step">
-
-          <div class="step-number">
-            04
-          </div>
-
-          <h3>Enjoy Your Trip</h3>
-
-          <p>
-            Pack your bags and enjoy your unforgettable journey.
-          </p>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       DISCOVER BANGLADESH
-  ========================== -->
-
-  <section class="discover">
-
-    <div class="container">
-
-      <div class="discover-box">
-
-        <div class="discover-content">
-
-          <span class="section-label">
-            Made For Explorers
-          </span>
-
-          <h2>
-            There is a whole Bangladesh waiting for you.
-          </h2>
-
-          <p>
-            Discover hidden gems, local culture, natural beauty
-            and memorable experiences with Neilusha Tour Guide.
-          </p>
-
-          <a href="#destinations" class="btn btn-primary">
-            Explore Destinations
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       REVIEWS
-  ========================== -->
-
-  <section class="reviews" id="reviews">
-
-    <div class="container">
-
-      <div class="section-head">
-
-        <span class="section-label">
-          Traveler Stories
-        </span>
-
-        <h2>
-          What Our Travelers Say
-        </h2>
-
-        <p>
-          Real experiences from people who travelled with us.
-        </p>
-
-      </div>
-
-
-      <div class="review-grid">
-
-
-        <div class="review-card">
-
-          <div class="stars">
-            ★★★★★
-          </div>
-
-          <p>
-            “The whole trip was very smooth. Everything was arranged
-            properly and the guide was extremely helpful. Definitely
-            recommend Neilusha.”
-          </p>
-
-          <div class="review-user">
-
-            <div class="avatar">
-              S
-            </div>
-
-            <div>
-              <strong>Shakil Ahmed</strong>
-              <span>Cox's Bazar Trip</span>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="review-card">
-
-          <div class="stars">
-            ★★★★★
-          </div>
-
-          <p>
-            “Sajek was amazing! The planning, hotel and transport were
-            all handled perfectly. We had a wonderful time with our
-            friends.”
-          </p>
-
-          <div class="review-user">
-
-            <div class="avatar">
-              N
-            </div>
-
-            <div>
-              <strong>Nusrat Jahan</strong>
-              <span>Sajek Adventure</span>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="review-card">
-
-          <div class="stars">
-            ★★★★★
-          </div>
-
-          <p>
-            “Great service and very friendly support. Sylhet was
-            beautiful and the whole family enjoyed the trip.”
-          </p>
-
-          <div class="review-user">
-
-            <div class="avatar">
-              R
-            </div>
-
-            <div>
-              <strong>Rahim Hasan</strong>
-              <span>Sylhet Nature Tour</span>
-            </div>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       CTA
-  ========================== -->
-
-  <section class="cta">
-
-    <div class="container">
-
-      <div class="cta-box">
-
-        <div class="cta-content">
-
-          <h2>
-            Ready for your next adventure?
-          </h2>
-
-          <p>
-            Let's create a memorable Bangladesh tour together.
-          </p>
-
-        </div>
-
-        <button
-          class="btn"
-          onclick="openBooking()"
-        >
-          Book Your Tour
-          <i class="fa-solid fa-arrow-right"></i>
-        </button>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       FOOTER
-  ========================== -->
-
-  <footer id="contact">
-
-    <div class="container">
-
-      <div class="footer-grid">
-
-
-        <div class="footer-col">
-
-          <a href="#home" class="logo footer-logo">
-
-            <div class="logo-icon">
-              <i class="fa-solid fa-location-dot"></i>
-            </div>
-
-            Neilusha <span>Tour Guide</span>
-
-          </a>
-
-          <p class="footer-about">
-            Your trusted travel companion for exploring the
-            beauty of Bangladesh.
-          </p>
-
-          <div class="socials">
-
-            <a href="#" aria-label="Facebook">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-
-            <a href="#" aria-label="Instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-
-            <a href="#" aria-label="WhatsApp">
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
-
-            <a href="#" aria-label="YouTube">
-              <i class="fa-brands fa-youtube"></i>
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <div class="footer-col">
-
-          <h3>Quick Links</h3>
-
-          <ul>
-
-            <li>
-              <a href="#home">Home</a>
-            </li>
-
-            <li>
-              <a href="#destinations">Destinations</a>
-            </li>
-
-            <li>
-              <a href="#tours">Tour Packages</a>
-            </li>
-
-            <li>
-              <a href="#why">About Us</a>
-            </li>
-
-            <li>
-              <a href="#reviews">Reviews</a>
-            </li>
-
-          </ul>
-
-        </div>
-
-
-        <div class="footer-col">
-
-          <h3>Popular Tours</h3>
-
-          <ul>
-
-            <li>
-              <a href="#tours">Cox's Bazar</a>
-            </li>
-
-            <li>
-              <a href="#tours">Sajek Valley</a>
-            </li>
-
-            <li>
-              <a href="#tours">Sylhet</a>
-            </li>
-
-            <li>
-              <a href="#tours">Bandarban</a>
-            </li>
-
-            <li>
-              <a href="#tours">Sundarbans</a>
-            </li>
-
-          </ul>
-
-        </div>
-
-
-        <div class="footer-col">
-
-          <h3>Contact Us</h3>
-
-          <div class="contact-item">
-
-            <i class="fa-solid fa-location-dot"></i>
-
-            <span>
-              Bangladesh
-            </span>
-
-          </div>
-
-          <div class="contact-item">
-
-            <i class="fa-solid fa-phone"></i>
-
-            <span>
-              +880 1XXX-XXXXXX
-            </span>
-
-          </div>
-
-          <div class="contact-item">
-
-            <i class="fa-solid fa-envelope"></i>
-
-            <span>
-              hello@neilushatour.com
-            </span>
-
-          </div>
-
-          <div class="contact-item">
-
-            <i class="fa-brands fa-whatsapp"></i>
-
-            <span>
-              WhatsApp Support
-            </span>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-
-      <div class="footer-bottom">
-
-        <span>
-          © 2026 Neilusha Tour Guide. All rights reserved.
-        </span>
-
-        <span>
-          Explore • Experience • Remember
-        </span>
-
-      </div>
-
-    </div>
-
-  </footer>
-
-
-  <!-- =========================
-       BOOKING MODAL
-  ========================== -->
-
-  <div class="modal" id="bookingModal">
-
-    <div class="modal-box">
-
-      <button
-        class="close-modal"
-        onclick="closeBooking()"
-        aria-label="Close"
-      >
-        <i class="fa-solid fa-xmark"></i>
       </button>
 
-      <h2>Plan Your Trip</h2>
 
-      <p class="modal-subtitle">
-        Tell us about your travel plan and we'll get back to you.
+      <ul class="nav-links" id="navLinks">
+
+        <li>
+          <a href="#home" class="active">Home</a>
+        </li>
+
+        <li>
+          <a href="#destinations">Destinations</a>
+        </li>
+
+        <li>
+          <a href="#packages">Packages</a>
+        </li>
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#gallery">Gallery</a>
+        </li>
+
+        <li>
+          <a href="#reviews">Reviews</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+
+        <li>
+          <a href="#" class="book-nav"
+             onclick="openBooking();return false;">
+            Book Now
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<!-- =======================================================
+     HERO
+======================================================== -->
+
+<section class="hero" id="home">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="hero-badge">
+
+        <i class="fa-solid fa-earth-asia"></i>
+
+        Explore Bangladesh With Us
+
+      </div>
+
+
+      <h1>
+
+        Discover Bangladesh,
+
+        <span>Your Way.</span>
+
+      </h1>
+
+
+      <p class="hero-description">
+
+        Explore breathtaking destinations, experience local culture
+        and create unforgettable memories with Neilusha Tour Guide.
+
       </p>
 
 
-      <form id="bookingForm">
+      <div class="hero-buttons">
 
-        <div class="form-group">
+        <a href="#packages"
+           class="btn btn-primary">
 
-          <label>
-            Full Name
-          </label>
+          Explore Tours
 
-          <input
-            type="text"
-            id="fullName"
-            placeholder="Enter your name"
-            required
-          />
+          <i class="fa-solid fa-arrow-right"></i>
 
-        </div>
+        </a>
 
 
-        <div class="form-row">
+        <button
+          class="btn btn-outline"
+          onclick="openBooking()">
 
-          <div class="form-group">
+          <i class="fa-solid fa-calendar-check"></i>
 
-            <label>
-              Phone Number
-            </label>
+          Plan My Trip
 
-            <input
-              type="tel"
-              id="phone"
-              placeholder="+880..."
-              required
-            />
+        </button>
+
+      </div>
+
+
+      <div class="hero-stats">
+
+        <div class="hero-stat">
+
+          <div class="hero-stat-icon">
+
+            <i class="fa-solid fa-users"></i>
 
           </div>
 
+          <div>
 
-          <div class="form-group">
+            <strong>100+</strong>
 
-            <label>
-              Travelers
-            </label>
-
-            <select id="bookingTravelers">
-
-              <option>1 Traveler</option>
-              <option>2 Travelers</option>
-              <option>3 Travelers</option>
-              <option>4 Travelers</option>
-              <option>5 Travelers</option>
-              <option>6+ Travelers</option>
-
-            </select>
+            <span>Happy Travelers</span>
 
           </div>
 
         </div>
 
 
-        <div class="form-group">
+        <div class="hero-stat">
 
-          <label>
-            Select Destination
-          </label>
+          <div class="hero-stat-icon">
 
-          <select id="bookingDestination" required>
+            <i class="fa-solid fa-map-location-dot"></i>
+
+          </div>
+
+          <div>
+
+            <strong>20+</strong>
+
+            <span>Destinations</span>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-stat">
+
+          <div class="hero-stat-icon">
+
+            <i class="fa-solid fa-star"></i>
+
+          </div>
+
+          <div>
+
+            <strong>4.9/5</strong>
+
+            <span>Traveler Rating</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- SEARCH -->
+
+  <div class="search-area">
+
+    <form class="search-box" id="searchForm">
+
+
+      <div class="search-field">
+
+        <i class="fa-solid fa-location-dot"></i>
+
+        <div style="width:100%">
+
+          <label>Destination</label>
+
+          <select id="searchDestination">
 
             <option value="">
-              Select a destination
+              Where do you want to go?
             </option>
 
             <option>Cox's Bazar</option>
@@ -2973,39 +3254,2119 @@
 
         </div>
 
+      </div>
 
-        <div class="form-row">
 
-          <div class="form-group">
+      <div class="search-field">
 
-            <label>
-              Travel Date
-            </label>
+        <i class="fa-regular fa-calendar"></i>
 
-            <input
-              type="date"
-              id="bookingDate"
-              required
-            />
+        <div style="width:100%">
+
+          <label>Travel Date</label>
+
+          <input type="date" id="searchDate">
+
+        </div>
+
+      </div>
+
+
+      <div class="search-field">
+
+        <i class="fa-solid fa-user-group"></i>
+
+        <div style="width:100%">
+
+          <label>Travelers</label>
+
+          <select id="searchTravelers">
+
+            <option>1 Traveler</option>
+            <option>2 Travelers</option>
+            <option>3 Travelers</option>
+            <option>4 Travelers</option>
+            <option>5 Travelers</option>
+            <option>6+ Travelers</option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+
+      <div class="search-field">
+
+        <i class="fa-solid fa-wallet"></i>
+
+        <div style="width:100%">
+
+          <label>Budget</label>
+
+          <select>
+
+            <option>Any Budget</option>
+            <option>Under ৳5,000</option>
+            <option>৳5,000 - ৳10,000</option>
+            <option>৳10,000+</option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="search-btn">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        Search
+
+      </button>
+
+
+    </form>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     DESTINATIONS
+======================================================== -->
+
+<section class="destinations" id="destinations">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span class="section-label">
+        Popular Places
+      </span>
+
+      <h2>
+        Explore Amazing Destinations
+      </h2>
+
+      <p>
+        From peaceful tea gardens to beautiful beaches and
+        adventurous mountains, discover Bangladesh with us.
+      </p>
+
+    </div>
+
+
+    <div class="destination-grid">
+
+
+      <!-- Cox's Bazar -->
+
+      <div class="destination-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85"
+          alt="Cox's Bazar">
+
+        <div class="destination-overlay">
+
+          <span class="destination-location">
+            Chattogram
+          </span>
+
+          <h3>
+            Cox's Bazar
+          </h3>
+
+          <p>
+            Beaches, sunset and peaceful coastal moments.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- Sajek -->
+
+      <div class="destination-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85"
+          alt="Sajek Valley">
+
+        <div class="destination-overlay">
+
+          <span class="destination-location">
+            Rangamati
+          </span>
+
+          <h3>
+            Sajek Valley
+          </h3>
+
+          <p>
+            Clouds, mountains and breathtaking views.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- Sylhet -->
+
+      <div class="destination-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1200&q=85"
+          alt="Sylhet">
+
+        <div class="destination-overlay">
+
+          <span class="destination-location">
+            Sylhet
+          </span>
+
+          <h3>
+            Sylhet
+          </h3>
+
+          <p>
+            Tea gardens, green hills and waterfalls.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- Ratargul -->
+
+      <div class="destination-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85"
+          alt="Ratargul">
+
+        <div class="destination-overlay">
+
+          <span class="destination-location">
+            Sylhet
+          </span>
+
+          <h3>
+            Ratargul
+          </h3>
+
+          <p>
+            Discover the magical freshwater swamp forest.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- Bandarban -->
+
+      <div class="destination-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1200&q=85"
+          alt="Bandarban">
+
+        <div class="destination-overlay">
+
+          <span class="destination-location">
+            Chattogram Hill Tracts
+          </span>
+
+          <h3>
+            Bandarban
+          </h3>
+
+          <p>
+            Mountains, waterfalls and adventure.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- Sundarbans -->
+
+      <div class="destination-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=85"
+          alt="Sundarbans">
+
+        <div class="destination-overlay">
+
+          <span class="destination-location">
+            Khulna
+          </span>
+
+          <h3>
+            Sundarbans
+          </h3>
+
+          <p>
+            Wildlife and the world's largest mangrove forest.
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     PACKAGES
+======================================================== -->
+
+<section class="packages" id="packages">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span class="section-label">
+        Best Packages
+      </span>
+
+      <h2>
+        Popular Tour Packages
+      </h2>
+
+      <p>
+        Choose your package and let Neilusha Tour Guide
+        handle the journey.
+      </p>
+
+    </div>
+
+
+    <div class="package-grid">
+
+
+      <!-- PACKAGE 1 -->
+
+      <div class="package-card">
+
+        <div class="package-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85"
+            alt="Cox's Bazar tour">
+
+          <span class="package-badge">
+            BEST SELLER
+          </span>
+
+        </div>
+
+
+        <div class="package-body">
+
+          <div class="package-location">
+            <i class="fa-solid fa-location-dot"></i>
+            Cox's Bazar
+          </div>
+
+          <h3>
+            Cox's Bazar Escape
+          </h3>
+
+          <p>
+            Enjoy the beach, sunset and relaxing coastal
+            experiences with your loved ones.
+          </p>
+
+          <div class="package-meta">
+
+            <span>
+              <i class="fa-regular fa-clock"></i>
+              3 Days
+            </span>
+
+            <span>
+              <i class="fa-solid fa-users"></i>
+              2-10
+            </span>
+
+          </div>
+
+          <div class="package-footer">
+
+            <div class="price">
+
+              <small>
+                Starting from
+              </small>
+
+              <strong>
+                ৳5,999
+              </strong>
+
+            </div>
+
+            <button
+              class="package-btn"
+              onclick="openBooking('Cox\\'s Bazar')">
+
+              Book Now
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- PACKAGE 2 -->
+
+      <div class="package-card">
+
+        <div class="package-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85"
+            alt="Sajek tour">
+
+          <span class="package-badge">
+            ADVENTURE
+          </span>
+
+        </div>
+
+
+        <div class="package-body">
+
+          <div class="package-location">
+            <i class="fa-solid fa-location-dot"></i>
+            Rangamati
+          </div>
+
+          <h3>
+            Sajek Adventure
+          </h3>
+
+          <p>
+            Experience the clouds, mountains and scenic
+            roads of Sajek Valley.
+          </p>
+
+          <div class="package-meta">
+
+            <span>
+              <i class="fa-regular fa-clock"></i>
+              2 Days
+            </span>
+
+            <span>
+              <i class="fa-solid fa-users"></i>
+              2-8
+            </span>
+
+          </div>
+
+          <div class="package-footer">
+
+            <div class="price">
+
+              <small>
+                Starting from
+              </small>
+
+              <strong>
+                ৳4,499
+              </strong>
+
+            </div>
+
+            <button
+              class="package-btn"
+              onclick="openBooking('Sajek Valley')">
+
+              Book Now
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- PACKAGE 3 -->
+
+      <div class="package-card">
+
+        <div class="package-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1200&q=85"
+            alt="Sylhet tour">
+
+          <span class="package-badge">
+            NATURE
+          </span>
+
+        </div>
+
+
+        <div class="package-body">
+
+          <div class="package-location">
+            <i class="fa-solid fa-location-dot"></i>
+            Sylhet
+          </div>
+
+          <h3>
+            Sylhet Nature Tour
+          </h3>
+
+          <p>
+            Discover tea gardens, waterfalls, rivers and
+            beautiful green landscapes.
+          </p>
+
+          <div class="package-meta">
+
+            <span>
+              <i class="fa-regular fa-clock"></i>
+              3 Days
+            </span>
+
+            <span>
+              <i class="fa-solid fa-users"></i>
+              2-12
+            </span>
+
+          </div>
+
+          <div class="package-footer">
+
+            <div class="price">
+
+              <small>
+                Starting from
+              </small>
+
+              <strong>
+                ৳6,499
+              </strong>
+
+            </div>
+
+            <button
+              class="package-btn"
+              onclick="openBooking('Sylhet')">
+
+              Book Now
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- PACKAGE 4 -->
+
+      <div class="package-card">
+
+        <div class="package-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1200&q=85"
+            alt="Bandarban tour">
+
+          <span class="package-badge">
+            PREMIUM
+          </span>
+
+        </div>
+
+
+        <div class="package-body">
+
+          <div class="package-location">
+            <i class="fa-solid fa-location-dot"></i>
+            Bandarban
+          </div>
+
+          <h3>
+            Bandarban Explorer
+          </h3>
+
+          <p>
+            Explore mountains, waterfalls and beautiful
+            hill landscapes.
+          </p>
+
+          <div class="package-meta">
+
+            <span>
+              <i class="fa-regular fa-clock"></i>
+              3 Days
+            </span>
+
+            <span>
+              <i class="fa-solid fa-users"></i>
+              2-8
+            </span>
+
+          </div>
+
+          <div class="package-footer">
+
+            <div class="price">
+
+              <small>
+                Starting from
+              </small>
+
+              <strong>
+                ৳7,999
+              </strong>
+
+            </div>
+
+            <button
+              class="package-btn"
+              onclick="openBooking('Bandarban')">
+
+              Book Now
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- PACKAGE 5 -->
+
+      <div class="package-card">
+
+        <div class="package-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=85"
+            alt="Sundarbans tour">
+
+          <span class="package-badge">
+            WILDLIFE
+          </span>
+
+        </div>
+
+
+        <div class="package-body">
+
+          <div class="package-location">
+            <i class="fa-solid fa-location-dot"></i>
+            Khulna
+          </div>
+
+          <h3>
+            Sundarbans Explorer
+          </h3>
+
+          <p>
+            Cruise through mangrove forests and discover
+            Bangladesh's wild side.
+          </p>
+
+          <div class="package-meta">
+
+            <span>
+              <i class="fa-regular fa-clock"></i>
+              3 Days
+            </span>
+
+            <span>
+              <i class="fa-solid fa-users"></i>
+              4-15
+            </span>
+
+          </div>
+
+          <div class="package-footer">
+
+            <div class="price">
+
+              <small>
+                Starting from
+              </small>
+
+              <strong>
+                ৳8,499
+              </strong>
+
+            </div>
+
+            <button
+              class="package-btn"
+              onclick="openBooking('Sundarbans')">
+
+              Book Now
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- PACKAGE 6 -->
+
+      <div class="package-card">
+
+        <div class="package-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85"
+            alt="Ratargul tour">
+
+          <span class="package-badge">
+            WEEKEND
+          </span>
+
+        </div>
+
+
+        <div class="package-body">
+
+          <div class="package-location">
+            <i class="fa-solid fa-location-dot"></i>
+            Sylhet
+          </div>
+
+          <h3>
+            Ratargul Weekend
+          </h3>
+
+          <p>
+            Enjoy a peaceful weekend surrounded by
+            freshwater forest and nature.
+          </p>
+
+          <div class="package-meta">
+
+            <span>
+              <i class="fa-regular fa-clock"></i>
+              2 Days
+            </span>
+
+            <span>
+              <i class="fa-solid fa-users"></i>
+              2-10
+            </span>
+
+          </div>
+
+          <div class="package-footer">
+
+            <div class="price">
+
+              <small>
+                Starting from
+              </small>
+
+              <strong>
+                ৳3,999
+              </strong>
+
+            </div>
+
+            <button
+              class="package-btn"
+              onclick="openBooking('Ratargul')">
+
+              Book Now
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     ABOUT
+======================================================== -->
+
+<section class="about" id="about">
+
+  <div class="container">
+
+    <div class="about-grid">
+
+
+      <div class="about-image">
+
+        <div class="about-image-main">
+
+          <img
+            src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1400&q=90"
+            alt="Travel">
+
+        </div>
+
+
+        <div class="about-card">
+
+          <div class="about-card-icon">
+
+            <i class="fa-solid fa-award"></i>
+
+          </div>
+
+          <div>
+
+            <strong>100+</strong>
+
+            <span>
+              Happy Travelers
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="about-content">
+
+        <span class="section-label">
+          Why Neilusha
+        </span>
+
+        <h2>
+          Travel More.<br>
+          Worry Less.
+        </h2>
+
+        <p>
+          We believe travelling should be exciting, comfortable
+          and stress-free. Our team helps you discover Bangladesh
+          with carefully planned trips and friendly support.
+        </p>
+
+
+        <div class="feature-grid">
+
+
+          <div class="feature">
+
+            <div class="feature-icon">
+              <i class="fa-solid fa-compass"></i>
+            </div>
+
+            <div>
+
+              <h4>
+                Local Expert Guides
+              </h4>
+
+              <p>
+                Travel with people who know the destination.
+              </p>
+
+            </div>
 
           </div>
 
 
-          <div class="form-group">
+          <div class="feature">
 
-            <label>
-              Package
-            </label>
+            <div class="feature-icon">
+              <i class="fa-solid fa-shield-heart"></i>
+            </div>
 
-            <select id="bookingPackage">
+            <div>
 
-              <option>Custom Trip</option>
-              <option>Standard Package</option>
-              <option>Premium Package</option>
+              <h4>
+                Safe & Trusted
+              </h4>
 
-            </select>
+              <p>
+                Your comfort and safety come first.
+              </p>
+
+            </div>
 
           </div>
+
+
+          <div class="feature">
+
+            <div class="feature-icon">
+              <i class="fa-solid fa-wallet"></i>
+            </div>
+
+            <div>
+
+              <h4>
+                Best Tour Value
+              </h4>
+
+              <p>
+                Great experiences at reasonable prices.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="feature">
+
+            <div class="feature-icon">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+
+            <div>
+
+              <h4>
+                24/7 Support
+              </h4>
+
+              <p>
+                We're available whenever you need us.
+              </p>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     STATS
+======================================================== -->
+
+<section class="stats">
+
+  <div class="container">
+
+    <div class="stats-grid">
+
+
+      <div class="stat-box">
+
+        <i class="fa-solid fa-map-location-dot"></i>
+
+        <strong>20+</strong>
+
+        <span>
+          Destinations
+        </span>
+
+      </div>
+
+
+      <div class="stat-box">
+
+        <i class="fa-solid fa-users"></i>
+
+        <strong>100+</strong>
+
+        <span>
+          Happy Travelers
+        </span>
+
+      </div>
+
+
+      <div class="stat-box">
+
+        <i class="fa-solid fa-suitcase-rolling"></i>
+
+        <strong>50+</strong>
+
+        <span>
+          Tours Completed
+        </span>
+
+      </div>
+
+
+      <div class="stat-box">
+
+        <i class="fa-solid fa-star"></i>
+
+        <strong>4.9</strong>
+
+        <span>
+          Average Rating
+        </span>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     HOW IT WORKS
+======================================================== -->
+
+<section class="how">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span class="section-label">
+        Simple Process
+      </span>
+
+      <h2>
+        Your Journey in 4 Easy Steps
+      </h2>
+
+      <p>
+        Planning your next adventure is simple with Neilusha.
+      </p>
+
+    </div>
+
+
+    <div class="steps">
+
+
+      <div class="step">
+
+        <div class="step-number">
+          01
+        </div>
+
+        <h3>
+          Choose Destination
+        </h3>
+
+        <p>
+          Pick your dream destination.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">
+          02
+        </div>
+
+        <h3>
+          Select Package
+        </h3>
+
+        <p>
+          Choose a package for your budget.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">
+          03
+        </div>
+
+        <h3>
+          Confirm Booking
+        </h3>
+
+        <p>
+          Send your details and confirm.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">
+          04
+        </div>
+
+        <h3>
+          Enjoy Your Trip
+        </h3>
+
+        <p>
+          Pack your bags and enjoy.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     GALLERY
+======================================================== -->
+
+<section class="gallery" id="gallery">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span class="section-label">
+        Travel Gallery
+      </span>
+
+      <h2>
+        Moments Worth Remembering
+      </h2>
+
+      <p>
+        A glimpse of the experiences waiting for you.
+      </p>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+
+      <div class="gallery-item">
+
+        <img
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=85"
+          alt="Beach">
+
+        <div class="gallery-overlay">
+          Cox's Bazar
+        </div>
+
+      </div>
+
+
+      <div class="gallery-item">
+
+        <img
+          src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=85"
+          alt="Mountain">
+
+        <div class="gallery-overlay">
+          Sajek
+        </div>
+
+      </div>
+
+
+      <div class="gallery-item">
+
+        <img
+          src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1000&q=85"
+          alt="Nature">
+
+        <div class="gallery-overlay">
+          Sylhet
+        </div>
+
+      </div>
+
+
+      <div class="gallery-item">
+
+        <img
+          src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=85"
+          alt="Forest">
+
+        <div class="gallery-overlay">
+          Sundarbans
+        </div>
+
+      </div>
+
+
+      <div class="gallery-item">
+
+        <img
+          src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85"
+          alt="Nature">
+
+        <div class="gallery-overlay">
+          Ratargul
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     DISCOVER
+======================================================== -->
+
+<section class="discover">
+
+  <div class="container">
+
+    <div class="discover-box">
+
+      <div class="discover-content">
+
+        <span class="section-label">
+          Made For Explorers
+        </span>
+
+        <h2>
+          A whole Bangladesh is waiting for you.
+        </h2>
+
+        <p>
+          Discover hidden gems, local culture, natural beauty
+          and memorable experiences with Neilusha Tour Guide.
+        </p>
+
+        <a href="#destinations"
+           class="btn btn-primary">
+
+          Explore Destinations
+
+          <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     REVIEWS
+======================================================== -->
+
+<section class="reviews" id="reviews">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span class="section-label">
+        Traveler Stories
+      </span>
+
+      <h2>
+        What Our Travelers Say
+      </h2>
+
+      <p>
+        Experiences from people who travelled with us.
+      </p>
+
+    </div>
+
+
+    <div class="review-grid">
+
+
+      <div class="review-card">
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <p>
+          “The whole trip was very smooth. Everything was
+          arranged properly and the guide was extremely helpful.
+          Definitely recommend Neilusha.”
+        </p>
+
+        <div class="reviewer">
+
+          <div class="avatar">
+            S
+          </div>
+
+          <div>
+
+            <strong>
+              Shakil Ahmed
+            </strong>
+
+            <span>
+              Cox's Bazar Trip
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="review-card">
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <p>
+          “Sajek was amazing! The planning, hotel and transport
+          were all handled perfectly. We had a wonderful time.”
+        </p>
+
+        <div class="reviewer">
+
+          <div class="avatar">
+            N
+          </div>
+
+          <div>
+
+            <strong>
+              Nusrat Jahan
+            </strong>
+
+            <span>
+              Sajek Adventure
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="review-card">
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <p>
+          “Great service and very friendly support. Sylhet was
+          beautiful and the whole family enjoyed the trip.”
+        </p>
+
+        <div class="reviewer">
+
+          <div class="avatar">
+            R
+          </div>
+
+          <div>
+
+            <strong>
+              Rahim Hasan
+            </strong>
+
+            <span>
+              Sylhet Nature Tour
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     FAQ
+======================================================== -->
+
+<section class="faq">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span class="section-label">
+        FAQ
+      </span>
+
+      <h2>
+        Frequently Asked Questions
+      </h2>
+
+      <p>
+        Everything you need to know before booking.
+      </p>
+
+    </div>
+
+
+    <div class="faq-wrapper">
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          How can I book a tour?
+
+          <i class="fa-solid fa-chevron-down"></i>
+
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Select your preferred tour and click Book Now.
+            Fill in your information and send your booking request.
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          Can I customize a tour package?
+
+          <i class="fa-solid fa-chevron-down"></i>
+
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Yes. You can request a customized itinerary based
+            on your destination, travel dates, group size and budget.
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          Do you arrange transportation?
+
+          <i class="fa-solid fa-chevron-down"></i>
+
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Transportation options can be included depending
+            on the selected tour package.
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          Do you arrange hotels?
+
+          <i class="fa-solid fa-chevron-down"></i>
+
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Hotel accommodation can be included in selected
+            packages or arranged separately upon request.
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          Can I contact you before booking?
+
+          <i class="fa-solid fa-chevron-down"></i>
+
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Absolutely. Contact us through phone, email or
+            WhatsApp for travel planning assistance.
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     CTA
+======================================================== -->
+
+<section class="cta">
+
+  <div class="container">
+
+    <div class="cta-box">
+
+      <div class="cta-content">
+
+        <h2>
+          Ready for your next adventure?
+        </h2>
+
+        <p>
+          Let's create an unforgettable Bangladesh tour together.
+        </p>
+
+      </div>
+
+
+      <button
+        class="btn"
+        onclick="openBooking()">
+
+        Book Your Tour
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     CONTACT
+======================================================== -->
+
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span class="section-label">
+        Get In Touch
+      </span>
+
+      <h2>
+        Let's Plan Your Trip
+      </h2>
+
+      <p>
+        Have a question or want a custom tour?
+        Send us a message.
+      </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+      <div class="contact-info">
+
+        <h2>
+          Contact Us
+        </h2>
+
+        <p>
+          Our travel support team is ready to help
+          you plan your next adventure.
+        </p>
+
+
+        <div class="contact-detail">
+
+          <div class="contact-detail-icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+
+          <div>
+
+            <strong>
+              Phone
+            </strong>
+
+            <span>
+              +880 1XXX-XXXXXX
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-detail">
+
+          <div class="contact-detail-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+
+          <div>
+
+            <strong>
+              WhatsApp
+            </strong>
+
+            <span>
+              +880 1XXX-XXXXXX
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-detail">
+
+          <div class="contact-detail-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+
+          <div>
+
+            <strong>
+              Email
+            </strong>
+
+            <span>
+              hello@neilushatour.com
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-detail">
+
+          <div class="contact-detail-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+
+          <div>
+
+            <strong>
+              Location
+            </strong>
+
+            <span>
+              Bangladesh
+            </span>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+
+      <div class="contact-form">
+
+        <form id="contactForm">
+
+          <div class="form-grid">
+
+
+            <div class="form-group">
+
+              <label>
+                Full Name
+              </label>
+
+              <input
+                type="text"
+                id="contactName"
+                placeholder="Your name"
+                required>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                Phone
+              </label>
+
+              <input
+                type="tel"
+                id="contactPhone"
+                placeholder="+880..."
+                required>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                Email
+              </label>
+
+              <input
+                type="email"
+                id="contactEmail"
+                placeholder="you@example.com">
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                Destination
+              </label>
+
+              <select
+                id="contactDestination">
+
+                <option>
+                  Select destination
+                </option>
+
+                <option>Cox's Bazar</option>
+                <option>Sajek Valley</option>
+                <option>Sylhet</option>
+                <option>Ratargul</option>
+                <option>Bandarban</option>
+                <option>Sundarbans</option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-group full">
+
+              <label>
+                Message
+              </label>
+
+              <textarea
+                id="contactMessage"
+                rows="5"
+                placeholder="Tell us about your trip..."
+                required></textarea>
+
+            </div>
+
+
+          </div>
+
+
+          <button
+            class="send-btn"
+            type="submit">
+
+            <i class="fa-solid fa-paper-plane"></i>
+
+            Send Message
+
+          </button>
+
+        </form>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     FOOTER
+======================================================== -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+
+      <div class="footer-col">
+
+        <a href="#home"
+           class="logo footer-logo">
+
+          <div class="logo-icon">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+          </div>
+
+          Neilusha <span>Tour Guide</span>
+
+        </a>
+
+
+        <p class="footer-about">
+
+          Your trusted travel companion for exploring
+          the beauty, culture and adventure of Bangladesh.
+
+        </p>
+
+
+        <div class="socials">
+
+          <a href="#"
+             aria-label="Facebook">
+
+            <i class="fa-brands fa-facebook-f"></i>
+
+          </a>
+
+          <a href="#"
+             aria-label="Instagram">
+
+            <i class="fa-brands fa-instagram"></i>
+
+          </a>
+
+          <a href="#"
+             aria-label="WhatsApp">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+          </a>
+
+          <a href="#"
+             aria-label="YouTube">
+
+            <i class="fa-brands fa-youtube"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="footer-col">
+
+        <h3>
+          Quick Links
+        </h3>
+
+        <ul>
+
+          <li>
+            <a href="#home">Home</a>
+          </li>
+
+          <li>
+            <a href="#destinations">Destinations</a>
+          </li>
+
+          <li>
+            <a href="#packages">Packages</a>
+          </li>
+
+          <li>
+            <a href="#about">About Us</a>
+          </li>
+
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <div class="footer-col">
+
+        <h3>
+          Popular Tours
+        </h3>
+
+        <ul>
+
+          <li>
+            <a href="#packages">Cox's Bazar</a>
+          </li>
+
+          <li>
+            <a href="#packages">Sajek Valley</a>
+          </li>
+
+          <li>
+            <a href="#packages">Sylhet</a>
+          </li>
+
+          <li>
+            <a href="#packages">Bandarban</a>
+          </li>
+
+          <li>
+            <a href="#packages">Sundarbans</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <div class="footer-col">
+
+        <h3>
+          Contact
+        </h3>
+
+
+        <div class="footer-contact">
+
+          <i class="fa-solid fa-location-dot"></i>
+
+          <span>
+            Bangladesh
+          </span>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+          <i class="fa-solid fa-phone"></i>
+
+          <span>
+            +880 1XXX-XXXXXX
+          </span>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+          <i class="fa-solid fa-envelope"></i>
+
+          <span>
+            hello@neilushatour.com
+          </span>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+          <i class="fa-brands fa-whatsapp"></i>
+
+          <span>
+            WhatsApp Support
+          </span>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 Neilusha Tour Guide. All rights reserved.
+      </span>
+
+      <span>
+        Explore • Experience • Remember
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+<!-- =======================================================
+     BOOKING MODAL
+======================================================== -->
+
+<div class="modal" id="bookingModal">
+
+  <div class="modal-box">
+
+
+    <button
+      class="close-modal"
+      onclick="closeBooking()">
+
+      <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+    <h2>
+      Plan Your Trip
+    </h2>
+
+    <p class="modal-subtitle">
+      Fill in your details and send us your travel request.
+    </p>
+
+
+    <form id="bookingForm">
+
+
+      <div class="form-group">
+
+        <label>
+          Full Name *
+        </label>
+
+        <input
+          type="text"
+          id="bookingName"
+          placeholder="Enter your name"
+          required>
+
+      </div>
+
+
+      <div class="modal-row">
+
+
+        <div class="form-group">
+
+          <label>
+            Phone *
+          </label>
+
+          <input
+            type="tel"
+            id="bookingPhone"
+            placeholder="+880..."
+            required>
 
         </div>
 
@@ -3013,360 +5374,667 @@
         <div class="form-group">
 
           <label>
-            Message
+            Travelers *
           </label>
 
-          <textarea
-            id="message"
-            rows="3"
-            placeholder="Tell us anything about your trip..."
-          ></textarea>
+          <select
+            id="bookingTravelers"
+            required>
+
+            <option>1 Traveler</option>
+            <option>2 Travelers</option>
+            <option>3 Travelers</option>
+            <option>4 Travelers</option>
+            <option>5 Travelers</option>
+            <option>6+ Travelers</option>
+
+          </select>
 
         </div>
 
 
-        <button
-          type="submit"
-          class="submit-booking"
-        >
-          <i class="fa-solid fa-paper-plane"></i>
-          Send Booking Request
-        </button>
+      </div>
 
-      </form>
 
-    </div>
+      <div class="form-group">
+
+        <label>
+          Destination *
+        </label>
+
+        <select
+          id="bookingDestination"
+          required>
+
+          <option value="">
+            Select destination
+          </option>
+
+          <option>Cox's Bazar</option>
+          <option>Sajek Valley</option>
+          <option>Sylhet</option>
+          <option>Ratargul</option>
+          <option>Bandarban</option>
+          <option>Sundarbans</option>
+
+        </select>
+
+      </div>
+
+
+      <div class="modal-row">
+
+
+        <div class="form-group">
+
+          <label>
+            Travel Date *
+          </label>
+
+          <input
+            type="date"
+            id="bookingDate"
+            required>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>
+            Package
+          </label>
+
+          <select id="bookingPackage">
+
+            <option>
+              Custom Trip
+            </option>
+
+            <option>
+              Standard Package
+            </option>
+
+            <option>
+              Premium Package
+            </option>
+
+          </select>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label>
+          Message
+        </label>
+
+        <textarea
+          id="bookingMessage"
+          rows="3"
+          placeholder="Tell us about your trip..."></textarea>
+
+      </div>
+
+
+      <button
+        class="modal-submit"
+        type="submit">
+
+        <i class="fa-solid fa-paper-plane"></i>
+
+        Send Booking Request
+
+      </button>
+
+
+    </form>
 
   </div>
 
-
-  <!-- =========================
-       TOAST
-  ========================== -->
-
-  <div class="toast" id="toast">
-    <i class="fa-solid fa-circle-check"></i>
-    &nbsp;
-    <span id="toastMessage">
-      Done!
-    </span>
-  </div>
+</div>
 
 
-  <!-- =========================
-       JAVASCRIPT
-  ========================== -->
 
-  <script>
+<!-- =======================================================
+     TOAST
+======================================================== -->
 
-    /* =========================
-       MOBILE MENU
-    ========================== */
+<div class="toast" id="toast">
 
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
+  <i class="fa-solid fa-circle-check"></i>
 
-    menuBtn.addEventListener("click", () => {
+  <span id="toastText">
+    Done!
+  </span>
 
-      navLinks.classList.toggle("active");
-
-      const icon = menuBtn.querySelector("i");
-
-      if (navLinks.classList.contains("active")) {
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-xmark");
-      } else {
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
-      }
-
-    });
+</div>
 
 
-    /* CLOSE MOBILE MENU WHEN CLICK LINK */
 
-    document.querySelectorAll(".nav-links a").forEach(link => {
+<!-- =======================================================
+     BACK TO TOP
+======================================================== -->
 
-      link.addEventListener("click", () => {
+<button
+  class="back-top"
+  id="backTop"
+  aria-label="Back to top">
 
-        navLinks.classList.remove("active");
+  <i class="fa-solid fa-arrow-up"></i>
 
-        const icon = menuBtn.querySelector("i");
+</button>
 
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
+
+
+<!-- =======================================================
+     JAVASCRIPT
+======================================================== -->
+
+<script>
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const menuBtn =
+  document.getElementById("menuBtn");
+
+const navLinks =
+  document.getElementById("navLinks");
+
+const bookingModal =
+  document.getElementById("bookingModal");
+
+const toast =
+  document.getElementById("toast");
+
+const toastText =
+  document.getElementById("toastText");
+
+const backTop =
+  document.getElementById("backTop");
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+menuBtn.addEventListener("click", function(){
+
+  navLinks.classList.toggle("active");
+
+  const icon =
+    menuBtn.querySelector("i");
+
+  if(navLinks.classList.contains("active")){
+
+    icon.classList.remove("fa-bars");
+
+    icon.classList.add("fa-xmark");
+
+  }else{
+
+    icon.classList.remove("fa-xmark");
+
+    icon.classList.add("fa-bars");
+
+  }
+
+});
+
+
+/* =========================================================
+   CLOSE MOBILE MENU
+========================================================= */
+
+document.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+  link.addEventListener("click", function(){
+
+    navLinks.classList.remove("active");
+
+    const icon =
+      menuBtn.querySelector("i");
+
+    icon.classList.remove("fa-xmark");
+
+    icon.classList.add("fa-bars");
+
+  });
+
+});
+
+
+/* =========================================================
+   BOOKING MODAL
+========================================================= */
+
+function openBooking(destination=""){
+
+  bookingModal.classList.add("active");
+
+  document.body.style.overflow="hidden";
+
+
+  if(destination){
+
+    const select =
+      document.getElementById("bookingDestination");
+
+    select.value=destination;
+
+  }
+
+}
+
+
+function closeBooking(){
+
+  bookingModal.classList.remove("active");
+
+  document.body.style.overflow="";
+
+}
+
+
+/* =========================================================
+   CLOSE MODAL OUTSIDE
+========================================================= */
+
+bookingModal.addEventListener("click",function(e){
+
+  if(e.target===bookingModal){
+
+    closeBooking();
+
+  }
+
+});
+
+
+/* =========================================================
+   ESC KEY
+========================================================= */
+
+document.addEventListener("keydown",function(e){
+
+  if(e.key==="Escape"){
+
+    closeBooking();
+
+  }
+
+});
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+let toastTimer;
+
+
+function showToast(message){
+
+  toastText.textContent=message;
+
+  toast.classList.add("show");
+
+  clearTimeout(toastTimer);
+
+  toastTimer=setTimeout(function(){
+
+    toast.classList.remove("show");
+
+  },3500);
+
+}
+
+
+/* =========================================================
+   SEARCH FORM
+========================================================= */
+
+document
+.getElementById("searchForm")
+.addEventListener("submit",function(e){
+
+  e.preventDefault();
+
+
+  const destination =
+    document.getElementById("searchDestination").value;
+
+
+  if(!destination){
+
+    showToast(
+      "Please select a destination."
+    );
+
+    return;
+
+  }
+
+
+  showToast(
+    "Finding tours for "+destination+"..."
+  );
+
+
+  setTimeout(function(){
+
+    document
+      .getElementById("packages")
+      .scrollIntoView({
+        behavior:"smooth"
+      });
+
+  },700);
+
+});
+
+
+/* =========================================================
+   BOOKING FORM
+========================================================= */
+
+document
+.getElementById("bookingForm")
+.addEventListener("submit",function(e){
+
+  e.preventDefault();
+
+
+  const name =
+    document.getElementById("bookingName").value.trim();
+
+  const phone =
+    document.getElementById("bookingPhone").value.trim();
+
+  const destination =
+    document.getElementById("bookingDestination").value;
+
+  const date =
+    document.getElementById("bookingDate").value;
+
+
+  if(
+    !name ||
+    !phone ||
+    !destination ||
+    !date
+  ){
+
+    showToast(
+      "Please complete all required fields."
+    );
+
+    return;
+
+  }
+
+
+  closeBooking();
+
+  showToast(
+    "Booking request submitted successfully!"
+  );
+
+
+  document
+    .getElementById("bookingForm")
+    .reset();
+
+});
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+document
+.getElementById("contactForm")
+.addEventListener("submit",function(e){
+
+  e.preventDefault();
+
+
+  const name =
+    document.getElementById("contactName")
+    .value.trim();
+
+  const phone =
+    document.getElementById("contactPhone")
+    .value.trim();
+
+  const message =
+    document.getElementById("contactMessage")
+    .value.trim();
+
+
+  if(!name || !phone || !message){
+
+    showToast(
+      "Please fill in the required fields."
+    );
+
+    return;
+
+  }
+
+
+  showToast(
+    "Your message has been sent successfully!"
+  );
+
+
+  this.reset();
+
+});
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+document
+.querySelectorAll(".faq-question")
+.forEach(function(question){
+
+  question.addEventListener("click",function(){
+
+    const item =
+      question.parentElement;
+
+
+    document
+      .querySelectorAll(".faq-item")
+      .forEach(function(other){
+
+        if(other!==item){
+
+          other.classList.remove("active");
+
+        }
 
       });
 
-    });
+
+    item.classList.toggle("active");
+
+  });
+
+});
 
 
-    /* =========================
-       BOOKING MODAL
-    ========================== */
+/* =========================================================
+   MINIMUM DATE
+========================================================= */
 
-    const modal = document.getElementById("bookingModal");
+const today =
+  new Date()
+  .toISOString()
+  .split("T")[0];
 
-    function openBooking(packageName = "") {
 
-      modal.classList.add("active");
+const searchDate =
+  document.getElementById("searchDate");
 
-      document.body.style.overflow = "hidden";
+const bookingDate =
+  document.getElementById("bookingDate");
 
-      if (packageName) {
 
-        const packageSelect =
-          document.getElementById("bookingPackage");
+if(searchDate){
 
-        const packageNames = Array.from(
-          packageSelect.options
-        ).map(option => option.text);
+  searchDate.min=today;
 
-        if (packageNames.includes(packageName)) {
-          packageSelect.value = packageName;
-        }
+}
 
-        const lowerName = packageName.toLowerCase();
+if(bookingDate){
 
-        if (lowerName.includes("cox")) {
-          document.getElementById("bookingDestination").value =
-            "Cox's Bazar";
-        }
+  bookingDate.min=today;
 
-        if (lowerName.includes("sajek")) {
-          document.getElementById("bookingDestination").value =
-            "Sajek Valley";
-        }
+}
 
-        if (lowerName.includes("sylhet")) {
-          document.getElementById("bookingDestination").value =
-            "Sylhet";
-        }
 
-        if (lowerName.includes("ratargul")) {
-          document.getElementById("bookingDestination").value =
-            "Ratargul";
-        }
+/* =========================================================
+   BACK TO TOP
+========================================================= */
 
-        if (lowerName.includes("bandarban")) {
-          document.getElementById("bookingDestination").value =
-            "Bandarban";
-        }
+window.addEventListener("scroll",function(){
 
-        if (lowerName.includes("sundarbans")) {
-          document.getElementById("bookingDestination").value =
-            "Sundarbans";
-        }
+  if(window.scrollY>500){
+
+    backTop.classList.add("show");
+
+  }else{
+
+    backTop.classList.remove("show");
+
+  }
+
+});
+
+
+backTop.addEventListener("click",function(){
+
+  window.scrollTo({
+
+    top:0,
+
+    behavior:"smooth"
+
+  });
+
+});
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
+
+const sections =
+  document.querySelectorAll("section[id]");
+
+
+window.addEventListener("scroll",function(){
+
+  const position =
+    window.scrollY+180;
+
+
+  sections.forEach(function(section){
+
+    const top =
+      section.offsetTop;
+
+    const height =
+      section.offsetHeight;
+
+    const id =
+      section.getAttribute("id");
+
+
+    if(
+      position>=top &&
+      position<top+height
+    ){
+
+      document
+        .querySelectorAll(".nav-links a")
+        .forEach(function(link){
+
+          link.classList.remove("active");
+
+
+          if(
+            link.getAttribute("href")
+            ==="#"+id
+          ){
+
+            link.classList.add("active");
+
+          }
+
+        });
+
+    }
+
+  });
+
+});
+
+
+/* =========================================================
+   SMOOTH ANCHOR FALLBACK
+========================================================= */
+
+document
+.querySelectorAll('a[href^="#"]')
+.forEach(function(anchor){
+
+  anchor.addEventListener("click",function(e){
+
+    const targetId =
+      this.getAttribute("href");
+
+
+    if(
+      targetId &&
+      targetId!=="#"
+    ){
+
+      const target =
+        document.querySelector(targetId);
+
+
+      if(target){
+
+        e.preventDefault();
+
+        target.scrollIntoView({
+          behavior:"smooth"
+        });
 
       }
 
     }
 
+  });
 
-    function closeBooking() {
+});
 
-      modal.classList.remove("active");
 
-      document.body.style.overflow = "";
+</script>
 
-    }
-
-
-    /* CLICK OUTSIDE MODAL */
-
-    modal.addEventListener("click", function(e) {
-
-      if (e.target === modal) {
-        closeBooking();
-      }
-
-    });
-
-
-    /* ESCAPE KEY */
-
-    document.addEventListener("keydown", function(e) {
-
-      if (e.key === "Escape") {
-        closeBooking();
-      }
-
-    });
-
-
-    /* =========================
-       SEARCH FORM
-    ========================== */
-
-    const searchForm =
-      document.getElementById("searchForm");
-
-    searchForm.addEventListener("submit", function(e) {
-
-      e.preventDefault();
-
-      const destination =
-        document.getElementById("destination").value;
-
-      if (!destination) {
-
-        showToast(
-          "Please select a destination first."
-        );
-
-        return;
-
-      }
-
-      showToast(
-        "Searching tours for " + destination + "..."
-      );
-
-      setTimeout(() => {
-
-        document
-          .getElementById("tours")
-          .scrollIntoView({
-            behavior: "smooth"
-          });
-
-      }, 700);
-
-    });
-
-
-    /* =========================
-       BOOKING FORM
-    ========================== */
-
-    const bookingForm =
-      document.getElementById("bookingForm");
-
-    bookingForm.addEventListener("submit", function(e) {
-
-      e.preventDefault();
-
-      const name =
-        document.getElementById("fullName").value.trim();
-
-      const phone =
-        document.getElementById("phone").value.trim();
-
-      const destination =
-        document.getElementById("bookingDestination").value;
-
-      const date =
-        document.getElementById("bookingDate").value;
-
-
-      if (!name || !phone || !destination || !date) {
-
-        showToast(
-          "Please complete all required fields."
-        );
-
-        return;
-
-      }
-
-
-      closeBooking();
-
-      showToast(
-        "Booking request sent successfully!"
-      );
-
-
-      bookingForm.reset();
-
-    });
-
-
-    /* =========================
-       TOAST
-    ========================== */
-
-    let toastTimer;
-
-    function showToast(message) {
-
-      const toast =
-        document.getElementById("toast");
-
-      const toastMessage =
-        document.getElementById("toastMessage");
-
-      toastMessage.textContent = message;
-
-      toast.classList.add("show");
-
-      clearTimeout(toastTimer);
-
-      toastTimer = setTimeout(() => {
-
-        toast.classList.remove("show");
-
-      }, 3000);
-
-    }
-
-
-    /* =========================
-       SET MINIMUM DATE
-    ========================== */
-
-    const today =
-      new Date().toISOString().split("T")[0];
-
-    document.getElementById("travelDate").min = today;
-
-    document.getElementById("bookingDate").min = today;
-
-
-    /* =========================
-       ACTIVE NAV ON SCROLL
-    ========================== */
-
-    const sections =
-      document.querySelectorAll("section[id]");
-
-    window.addEventListener("scroll", () => {
-
-      const scrollPosition =
-        window.scrollY + 150;
-
-      sections.forEach(section => {
-
-        const top = section.offsetTop;
-        const height = section.offsetHeight;
-        const id = section.getAttribute("id");
-
-        if (
-          scrollPosition >= top &&
-          scrollPosition < top + height
-        ) {
-
-          document
-            .querySelectorAll(".nav-links a")
-            .forEach(link => {
-
-              link.classList.remove("active");
-
-              if (
-                link.getAttribute("href") === "#" + id
-              ) {
-                link.classList.add("active");
-              }
-
-            });
-
-        }
-
-      });
-
-    });
-
-  </script>
 
 </body>
 </html>
